@@ -1,0 +1,163 @@
+{
+    "profile": {
+        "paragraphs": [
+            "Soy un Desarrollador de Software con una trayectoria de más de 6 años,\n      destacándome en la creación de soluciones escalables, robustas y de alto\n      rendimiento. Mi formación inicial como Profesor de Psicología me ha proporcionado\n      un conjunto único de habilidades interpersonales, que incluyen comunicación\n      efectiva, liderazgo inspirador y una profunda capacidad de mentoría. Estas\n      habilidades son pilares fundamentales en mi enfoque de trabajo, permitiéndome no\n      solo dirigir equipos técnicos, sino también impartir exitosos workshops sobre buenas\n      prácticas de desarrollo y arquitectura de software.",
+            "Mi expertise técnico se centra en el diseño y desarrollo de microservicios, utilizando tecnologías de vanguardia como\n      Scala, Kotlin y Java con Spring Boot. Poseo un profundo conocimiento en arquitecturas distribuidas y diseño orientado a\n      eventos, asegurando la construcción de sistemas altamente concurrentes y resilientes.",
+            "Busco activamente oportunidades que me permitan fusionar mi sólida experiencia técnica con mi pasión por la formación\n      y el liderazgo de equipos de alto rendimiento. Mi objetivo es contribuir al crecimiento tecnológico y profesional,\n      fomentando entornos colaborativos y de mejora continua."
+        ]
+    },
+    "skills": [
+        {
+            "category": "Integración de Sistemas",
+            "skills": [
+                "APIs REST",
+                "GraphQL",
+                "Kafka",
+                "SOAP"
+            ]
+        },
+        {
+            "category": "Frameworks y Librerías",
+            "skills": [
+                "Spring Boot",
+                "React",
+                "Next.js",
+                "Expo",
+                "Express",
+                "Quarkus"
+            ]
+        },
+        {
+            "category": "Arquitectura y Buenas Prácticas",
+            "skills": [
+                "Microservicios",
+                "DDD",
+                "Clean Architecture",
+                "SOLID",
+                "TDD",
+                "Event Driven"
+            ]
+        },
+        {
+            "category": "Cloud y DevOps",
+            "skills": [
+                "GCP",
+                "Docker",
+                "Kubernetes",
+                "CI/CD",
+                "GitHub Actions",
+                "Jenkins",
+                "Gradle",
+                "Maven",
+                "Git",
+                "Jira",
+                "Confluence",
+                "Grafana",
+                "Prometheus",
+                "Logtash"
+            ]
+        },
+        {
+            "category": "Programación",
+            "skills": [
+                "Java",
+                "Kotlin",
+                "Scala",
+                "TypeScript",
+                "Golang"
+            ]
+        },
+        {
+            "category": "Bases de Datos",
+            "skills": [
+                "PostgreSQL",
+                "MongoDB",
+                "Redis",
+                "MySQL",
+                "Embeddings",
+                "Firestore",
+                "Elasticsearch",
+                "Loki"
+            ]
+        }
+    ],
+    "experiences": [
+        {
+            "title": "Director Arquitecto/Infra (cto)",
+            "company": "Branded",
+            "period": "Marzo 2023 – Actualidad",
+            "items": [
+                "Diseño y desarrollo de microservicios con Arquitectura Hexagonal y principios de Domain-Driven Design (DDD), logrando una modularidad óptima y una alta cohesión en el sistema.",
+                "Implementación y gestión de pipelines CI/CD robustas utilizando Jenkins en un entorno distribuido con diversas máquinas virtuales en Google Cloud Platform (GCP), optimizando los procesos de entrega de software.",
+                "Diseño y arquitectura de sistemas orientados a eventos de alta concurrencia, integrando tecnologías clave como Kafka para la mensajería asíncrona, Redis para el almacenamiento en caché de alto rendimiento y GCP para la escalabilidad de la infraestructura.",
+                "Desarrollo de algoritmos complejos para Redes Sociales de alta concurrencia, garantizando la estabilidad y el rendimiento del sistema bajo cargas extremas.",
+                "Implementación de soluciones cloud escalables"
+            ]
+        },
+        {
+            "title": "Software Engineer",
+            "company": "Dividenz",
+            "period": "Julio 2024 – Octubre 2025",
+            "items": [
+                "Desarrollo de microservicios aplicando arquitectura hexagonal y principios de DDD para optimizar la modularidad del sistema.",
+                "Implementación y análisis de métricas de procesos de inversión y onboarding de clientes utilizando Elasticsearch.",
+                "Diseño de soluciones escalables y migración de procesos legacy, integrando tecnologías clave como Kafka y AWS."
+            ]
+        },
+        {
+            "title": "Sr. Software Developer",
+            "company": "Redbee Studios",
+            "period": "Marzo 2022 – Julio 2024",
+            "items": [
+                "En Redbee Studios, me desempeñé como Full Stack Developer en un gateway de pagos de misión crítica",
+                "Participación activa en el desarrollo Full Stack, construyendo funcionalidades internas y para clientes con un stack tecnológico diverso que incluía Scala y Play Framework para el backend, Kotlin y Spring Boot para microservicios adicionales, y React.js para interfaces de usuario dinámicas.",
+                "Liderazgo de workshops técnicos internos, enfocados en la promoción de buenas prácticas de desarrollo, principios de Arquitectura Limpia y el patrón de Puertos y Adaptadores en programación funcional, elevando el nivel técnico del equipo."
+            ]
+        },
+        {
+            "title": "Software Engineer",
+            "company": "Adviters",
+            "period": "Junio 2021 – Marzo 2022",
+            "items": [
+                "Proyecto Banco Comafi",
+                "Migración exitosa de un backend monolítico legacy a un microservicio moderno utilizando Spring Boot.",
+                "Implementación de Data Lakes e integración de servicios SOAP y REST para mejorar la interoperabilidad de los sistemas del banco.",
+                "Impartición de workshops sobre principios de diseño de software como SOLID, DDD y Arquitectura Limpia."
+            ]
+        },
+        {
+            "title": "Backend Developer Freelance",
+            "company": "Adango Hockey",
+            "period": "Enero 2018 – Marzo 2020",
+            "items": [
+                "Desarrollo completo del backend para un servicio de e-commerce utilizando Spring Boot."
+            ]
+        }
+    ],
+    "mentoring": [
+        {
+            "title": "Mentor",
+            "institution": "Alkemy",
+            "period": "Septiembre 2022 – Octubre 2022",
+            "description": "Capacitación y guía a un grupo de 10 desarrolladoras en tecnologías backend, incluyendo Spring Boot y el manejo de bases de datos relacionales y no relacionales."
+        },
+        {
+            "title": "Profesor de Psicología",
+            "institution": "Dirección General de Cultura y Educación",
+            "period": "2016 - 2021",
+            "description": "Ejercicio como docente, donde se desarrollaron habilidades avanzadas de comunicación, liderazgo y formación de equipos."
+        }
+    ],
+    "education": [
+        {
+            "title": "Carrera de Backend con Java",
+            "institution": "Platzi",
+            "period": "2017 - 2020"
+        },
+        {
+            "title": "Profesorado en Psicología",
+            "institution": "Universidad Nacional de La Plata",
+            "period": "2012 - 2017"
+        }
+    ]
+}

@@ -1,9 +1,9 @@
 {
     "profile": {
         "paragraphs": [
-            "Soy un Desarrollador de Software con una trayectoria de más de 6 años,\n      destacándome en la creación de soluciones escalables, robustas y de alto\n      rendimiento. Mi formación inicial como Profesor de Psicología me ha proporcionado\n      un conjunto único de habilidades interpersonales, que incluyen comunicación\n      efectiva, liderazgo inspirador y una profunda capacidad de mentoría. Estas\n      habilidades son pilares fundamentales en mi enfoque de trabajo, permitiéndome no\n      solo dirigir equipos técnicos, sino también impartir exitosos workshops sobre buenas\n      prácticas de desarrollo y arquitectura de software.",
-            "Mi expertise técnico se centra en el diseño y desarrollo de microservicios, utilizando tecnologías de vanguardia como\n      Scala, Kotlin y Java con Spring Boot. Poseo un profundo conocimiento en arquitecturas distribuidas y diseño orientado a\n      eventos, asegurando la construcción de sistemas altamente concurrentes y resilientes.",
-            "Busco activamente oportunidades que me permitan fusionar mi sólida experiencia técnica con mi pasión por la formación\n      y el liderazgo de equipos de alto rendimiento. Mi objetivo es contribuir al crecimiento tecnológico y profesional,\n      fomentando entornos colaborativos y de mejora continua."
+            "Soy Martín Correa, Desarrollador de Software Senior con más de 7 años de experiencia. Aprendí a programar solo, construyendo el software que necesitaba una empresa que co-fundé, y desde entonces no paré. Hoy hago algo muy concreto: convierto la idea de un founder en un producto sólido, bien construido y listo para escalar.",
+            "Mi especialidad es el diseño y desarrollo de sistemas backend y arquitecturas de microservicios (Hexagonal, DDD, event-driven) con Scala, Kotlin y Java/Spring Boot. Ese estándar lo forjé en sistemas de pago de misión crítica —Prisma/Payway, Fiserv, Banco Comafi—, donde un error no es una opción: arquitectura, buenas prácticas y código que envejece bien.",
+            "Busco sumarme como mano derecha técnica de equipos que están construyendo algo que valga la pena. Me obsesiona aprender —de la arquitectura a la IA— y compartir lo que sé. Sin humo: digo lo que soy y construyo lo que prometo."
         ]
     },
     "skills": [
@@ -42,8 +42,10 @@
             "category": "Cloud y DevOps",
             "skills": [
                 "GCP",
+                "AWS",
                 "Docker",
                 "Kubernetes",
+                "OpenShift",
                 "CI/CD",
                 "GitHub Actions",
                 "Jenkins",
@@ -54,7 +56,7 @@
                 "Confluence",
                 "Grafana",
                 "Prometheus",
-                "Logtash"
+                "Logstash"
             ]
         },
         {
@@ -83,78 +85,86 @@
     ],
     "experiences": [
         {
-            "title": "Director Arquitecto/Infra (cto)",
+            "title": "Co-Founder & CTO",
             "company": "Branded",
             "period": "Marzo 2023 – Actualidad",
+            "description": "Branded es una startup early-stage (equipo de 5) que co-fundé: una red social de social shopping que conecta a creadores de contenido, marcas y compradores, con una comunidad de ~38 mil seguidores.",
             "items": [
-                "Diseño y desarrollo de microservicios con Arquitectura Hexagonal y principios de Domain-Driven Design (DDD), logrando una modularidad óptima y una alta cohesión en el sistema.",
-                "Implementación y gestión de pipelines CI/CD robustas utilizando Jenkins en un entorno distribuido con diversas máquinas virtuales en Google Cloud Platform (GCP), optimizando los procesos de entrega de software.",
-                "Diseño y arquitectura de sistemas orientados a eventos de alta concurrencia, integrando tecnologías clave como Kafka para la mensajería asíncrona, Redis para el almacenamiento en caché de alto rendimiento y GCP para la escalabilidad de la infraestructura.",
-                "Desarrollo de algoritmos complejos para Redes Sociales de alta concurrencia, garantizando la estabilidad y el rendimiento del sistema bajo cargas extremas.",
-                "Implementación de soluciones cloud escalables"
+                "Lidero la visión tecnológica, la arquitectura y la infraestructura del producto.",
+                "Diseño y desarrollo de microservicios con Arquitectura Hexagonal y Domain-Driven Design (DDD), con foco en alta cohesión y bajo acoplamiento.",
+                "Diseño de algoritmos de contenido que integran IA para personalizar el feed, priorizando la rapidez de respuesta.",
+                "Arquitectura de sistemas orientados a eventos de alta concurrencia con Kafka (mensajería asíncrona) y Redis (caché de alto rendimiento) sobre Google Cloud Platform.",
+                "Pipelines de CI/CD con Jenkins en un entorno distribuido sobre GCP."
             ]
         },
         {
-          "title": "Sr. Software Engineer",
-          "company": "Eldar",
-          "period": "Noviembre 2025 – Actualidad",
-          "items": [
-            "ISO 8583",
-            "ISO 9001"
-          ]
+            "title": "Sr. Software Engineer",
+            "company": "Eldar",
+            "period": "Noviembre 2025 – Actualidad",
+            "description": "Eldar es una consultora de tecnología; trabajo para Fiserv, una empresa global de medios de pago.",
+            "items": [
+                "Migración de una plataforma backoffice legacy de Java 8 a Java 21, modernizando una base de código crítica para la operación.",
+                "La plataforma gestiona el alta de terminales (POS) y de clientes, entre otras operaciones del negocio de pagos.",
+                "Despliegue de servicios en OpenShift (Kubernetes)."
+            ]
         },
         {
-            "title": "Sr. Software Engineer",
+            "title": "Sr. Software Developer",
             "company": "Dividenz",
             "period": "Julio 2024 – Octubre 2025",
+            "description": "Dividenz es una plataforma de inversión en real estate. Trabajé en un equipo reducido de 5 desarrolladores, en contacto directo con el CTO.",
             "items": [
-                "Desarrollo de microservicios aplicando arquitectura hexagonal y principios de DDD para optimizar la modularidad del sistema.",
-                "Implementación y análisis de métricas de procesos de inversión y onboarding de clientes utilizando Elasticsearch.",
-                "Diseño de soluciones escalables y migración de procesos legacy, integrando tecnologías clave como Kafka y AWS."
+                "Desarrollo de microservicios con Arquitectura Hexagonal y principios de DDD, optimizando la modularidad del sistema.",
+                "Implementación y análisis de métricas de los procesos de inversión y de onboarding de clientes con Elasticsearch.",
+                "Diseño de soluciones escalables y migración de procesos legacy, integrando Kafka y AWS."
             ]
         },
         {
             "title": "Ssr. Software Developer",
             "company": "Redbee Studios",
             "period": "Marzo 2022 – Julio 2024",
+            "description": "Redbee Studios es una consultora de software. Trabajé en el proyecto Payway (Prisma Medios de Pago), un gateway de pagos de misión crítica.",
             "items": [
-                "En Redbee Studios, me desempeñé como Full Stack Developer en un gateway de pagos de misión crítica",
-                "Participación activa en el desarrollo Full Stack, construyendo funcionalidades internas y para clientes con un stack tecnológico diverso que incluía Scala y Play Framework para el backend, Kotlin y Spring Boot para microservicios adicionales, y React.js para interfaces de usuario dinámicas.",
-                "Liderazgo de workshops técnicos internos, enfocados en la promoción de buenas prácticas de desarrollo, principios de Arquitectura Limpia y el patrón de Puertos y Adaptadores en programación funcional, elevando el nivel técnico del equipo."
+                "Desarrollo Full Stack sobre un stack diverso: backend en Scala/Play Framework y microservicios en Kotlin/Spring Boot, con interfaces en React.js.",
+                "Construcción de funcionalidades internas y para clientes, con foco en la robustez propia de un sistema de pagos.",
+                "Lideré workshops técnicos internos sobre buenas prácticas, Clean Architecture y el patrón de Puertos y Adaptadores en programación funcional."
             ]
         },
         {
             "title": "Software Engineer",
             "company": "Adviters",
             "period": "Junio 2021 – Marzo 2022",
+            "description": "Adviters es una consultora de tecnología. Trabajé para Banco Comafi.",
             "items": [
-                "Proyecto Banco Comafi",
-                "Migración exitosa de un backend monolítico legacy a un microservicio moderno utilizando Spring Boot.",
-                "Implementación de Data Lakes e integración de servicios SOAP y REST para mejorar la interoperabilidad de los sistemas del banco.",
-                "Impartición de workshops sobre principios de diseño de software como SOLID, DDD y Arquitectura Limpia."
+                "Migré un backend monolítico legacy a un microservicio moderno con Spring Boot.",
+                "Implementé Data Lakes e integré servicios SOAP y REST para mejorar la interoperabilidad de los sistemas del banco.",
+                "Dicté workshops internos sobre principios de diseño: SOLID, DDD y Clean Architecture."
             ]
         },
         {
-            "title": "Backend Developer Freelance",
+            "title": "Co-Founder & Software Developer",
             "company": "Adango Hockey",
             "period": "Enero 2018 – Marzo 2020",
+            "description": "Adango Hockey es una fábrica de equipamiento de protección para arqueros de hockey sobre césped, que co-fundé junto a mi papá.",
             "items": [
-                "Desarrollo completo del backend para un servicio de e-commerce utilizando Spring Boot."
+                "Fue acá donde mi carrera en software despegó: aprendí a programar en serio construyendo las herramientas que el negocio necesitaba.",
+                "Desarrollé el software interno para gestionar la operación de la fábrica.",
+                "Construí la tienda online (e-commerce) de la marca, incluyendo todo el backend."
             ]
         }
     ],
     "mentoring": [
         {
-            "title": "Mentor",
+            "title": "Mentor & Instructor",
             "institution": "Alkemy",
-            "period": "Septiembre 2022 – Octubre 2022",
-            "description": "Capacitación y guía a un grupo de 10 desarrolladoras en tecnologías backend, incluyendo Spring Boot y el manejo de bases de datos relacionales y no relacionales."
+            "period": "2022 – Actualidad",
+            "description": "Doy clases y mentoría de forma recurrente a desarrolladores en formación: backend con Java y Spring Boot, arquitectura y buenas prácticas. Quiero ser el guía que yo no tuve."
         },
         {
-            "title": "Profesor de Psicología",
+            "title": "Docente",
             "institution": "Dirección General de Cultura y Educación",
             "period": "2016 - 2021",
-            "description": "Ejercicio como docente, donde se desarrollaron habilidades avanzadas de comunicación, liderazgo y formación de equipos."
+            "description": "Ejercicio docente donde desarrollé habilidades avanzadas de comunicación, liderazgo y formación de equipos."
         }
     ],
     "education": [

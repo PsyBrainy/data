@@ -1,6 +1,13 @@
 {
     "posts": [
         {
+            "slug": "dos-devs-catorce-microservicios",
+            "title": "Dos desarrolladores, catorce microservicios",
+            "date": "2026-08-07",
+            "excerpt": "Cómo sostenemos la plataforma de una startup siendo dos. De una app lowcode a una arquitectura orientada al dominio, por qué cada pieza entró cuando dolía, y el incendio que encontré scrolleando mi propia app un domingo.",
+            "image": "images/dos-devs-catorce-microservicios.jpg"
+        },
+        {
             "slug": "aprender-por-mi-cuenta",
             "title": "Cómo me hice programador por mi cuenta (y el método que sigo usando)",
             "date": "2026-08-06",

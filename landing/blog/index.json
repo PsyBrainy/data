@@ -1,0 +1,10 @@
+{
+    "posts": [
+        {
+            "slug": "aprender-por-mi-cuenta",
+            "title": "Cómo me hice programador por mi cuenta (y el método que sigo usando)",
+            "date": "2026-08-06",
+            "excerpt": "Nadie me enseñó a programar. No tenía profesores, ni mentores, ni plata de sobra: me lo busqué por mi cuenta. Esta es la historia — y lo que aprendí sobre aprender."
+        }
+    ]
+}

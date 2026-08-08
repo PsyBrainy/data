@@ -1,6 +1,13 @@
 {
     "posts": [
         {
+            "slug": "ia-algoritmo-feed",
+            "title": "Tengo IA en producción. Por eso no le puse una red neuronal a mi feed",
+            "date": "2026-08-08",
+            "excerpt": "Podía construir \"el algoritmo de YouTube\". Me senté a medir, y decidí no hacerlo. Esta es la historia técnica de por qué —y de dónde la IA sí se gana su lugar.",
+            "image": "images/ia-algoritmo-feed.png"
+        },
+        {
             "slug": "dos-devs-catorce-microservicios",
             "title": "Dos desarrolladores, catorce microservicios",
             "date": "2026-08-07",

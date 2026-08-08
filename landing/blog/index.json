@@ -1,6 +1,13 @@
 {
     "posts": [
         {
+            "slug": "ia-copiloto",
+            "title": "No dejo que la IA piense. Solo que ejecute",
+            "date": "2026-08-15",
+            "excerpt": "Le di autonomía una vez y me construyó algo imposible de mantener. El método que armé después: yo diseño, ella acciona — y por qué la IA multiplica lo que ya sos.",
+            "image": "images/ia-copiloto.jpg"
+        },
+        {
             "slug": "ia-algoritmo-feed",
             "title": "Tengo IA en producción. Por eso no le puse una red neuronal a mi feed",
             "date": "2026-08-08",

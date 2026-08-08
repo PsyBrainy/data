@@ -138,19 +138,19 @@ Es un caso de libro de **integridad referencial diferida**: cuando duplicás inf
 
 El sistema traía una tanda fija de candidatos (llamémosla *N*) y recién **después** filtraba: descartaba los que el usuario ya había visto e intentaba recuperar los datos completos de cada publicación contra la base, que es donde se caían las tumbas.
 
-Si llamamos *m* a la proporción de ids muertos y *v* a la de ya vistos, la página efectiva era:
+Si llamamos $m$ a la proporción de referencias muertas y $v$ a la de ya vistas, la página efectiva era:
 
-```
-items_servidos = N × (1 − m) × (1 − v)
-```
+$$
+\text{items servidos} = N \cdot (1 - m) \cdot (1 - v)
+$$
 
-Con `N = 10`, `m ≈ 0.5` y `v` alto en la zona contaminada, eso daba entre **0 y 2 items**. Una página de feed prácticamente vacía.
+Con $N = 10$, $m \approx 0{,}5$ y $v$ alto en la zona contaminada, eso daba entre **0 y 2 items**. Una página de feed prácticamente vacía.
 
-Y acá está la parte perversa: el cursor avanzaba **N posiciones por request**, no N items servidos. Para cruzar un "desierto" de *D* ids muertos hacían falta:
+Y acá está la parte perversa: el cursor avanzaba **$N$ posiciones por request**, no $N$ items servidos. Para cruzar un "desierto" de $D$ referencias muertas hacían falta:
 
-```
-requests_necesarios = D / N
-```
+$$
+\text{requests} = \frac{D}{N}
+$$
 
 Con cientos de tumbas por delante, eso son decenas de peticiones que ningún cliente va a hacer jamás.
 
@@ -185,9 +185,9 @@ Lo resolví en dos tiempos, y creo que esa separación es lo más útil que pued
 - **Limpieza perezosa**: cuando una referencia no resuelve al armar la página, se la elimina de la lista en ese mismo momento. El sistema se auto-cura con el uso, gratis y para siempre. Es el patrón inverso al de un proceso de limpieza programado: en vez de barrer todo cada tanto, se arregla exactamente lo que se está mirando.
 - **Sobre-fetch compensado**: en lugar de traer *N* fijo, traer más y seguir bajando el cursor hasta juntar *N* items vivos o agotar un máximo de ventanas. Despejando la fórmula anterior, el factor de sobre-pedido necesario es:
 
-```
-N_fetch = N_objetivo / ((1 − m) × (1 − v))
-```
+$$
+N_{\text{fetch}} = \frac{N_{\text{objetivo}}}{(1 - m)(1 - v)}
+$$
 
 - **Relleno con variedad real** y un tope de página estricto, para no quemar el pool entero en una sola respuesta.
 - **Al borrar contenido**, limpiar también los pools globales.

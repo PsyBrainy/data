@@ -26,9 +26,9 @@ Una brecha de ingeniería se cierra con trabajo: más horas, mejor código, más
 
 Un modelo aprende ajustando parámetros. Muy a grandes rasgos, para que generalice en vez de memorizar, necesitás que la cantidad de ejemplos supere holgadamente a la cantidad de parámetros:
 
-```
-ejemplos_de_entrenamiento ≫ parámetros_del_modelo
-```
+$$
+N_{\text{ejemplos}} \;\gg\; N_{\text{parámetros}}
+$$
 
 Una red de recomendación modesta arranca en cientos de miles de parámetros solo en la capa de representaciones (una por ítem del catálogo, más otra por cada característica del usuario). Del otro lado, mi conjunto de entrenamiento eran unos pocos miles de interacciones al mes.
 
@@ -71,12 +71,14 @@ flowchart TB
 
 ¿Por qué dos etapas y no una? Por costo computacional. Si *N* es el catálogo y *k* los candidatos que pasan a la segunda fase:
 
-```
-costo_1_etapa  = N × costo_scoring_fino
-costo_2_etapas = N × costo_scoring_barato  +  k × costo_scoring_fino
-```
+$$
+\begin{aligned}
+C_{\text{1 etapa}} &= N \cdot c_{\text{fino}} \\[4pt]
+C_{\text{2 etapas}} &= N \cdot c_{\text{barato}} \;+\; k \cdot c_{\text{fino}}
+\end{aligned}
+$$
 
-Como `k ≪ N` y el scoring barato es órdenes de magnitud más liviano, la segunda opción gana por muchísimo. Y —esto es lo importante— **la forma no depende del modelo**. Podés montar hoy las dos etapas con heurísticas y mañana reemplazar solo el ranker por un modelo entrenado, sin re-arquitecturar nada.
+Como $k \ll N$ y el scoring barato es órdenes de magnitud más liviano, la segunda opción gana por muchísimo. Y —esto es lo importante— **la forma no depende del modelo**. Podés montar hoy las dos etapas con heurísticas y mañana reemplazar solo el ranker por un modelo entrenado, sin re-arquitecturar nada.
 
 ### Decisión 2: mover el trabajo al momento de la escritura
 
@@ -84,12 +86,14 @@ El primer feed que tuvimos calculaba todo al momento de pedirlo: una consulta en
 
 Funcionaba, hasta que dejó de funcionar. Y el motivo se ve en una cuenta simple. Si *L* son las lecturas (alguien abre el feed) y *E* las escrituras (alguien publica o interactúa):
 
-```
-Modelo "calcular al leer":     costo_total = L × costo_consulta_compleja
-Modelo "calcular al escribir": costo_total = E × costo_actualización + L × costo_lectura_barata
-```
+$$
+\begin{aligned}
+\text{calcular al leer:} \quad & C = L \cdot c_{\text{consulta compleja}} \\[4pt]
+\text{calcular al escribir:} \quad & C = E \cdot c_{\text{actualización}} \;+\; L \cdot c_{\text{lectura barata}}
+\end{aligned}
+$$
 
-En una red social **L es muchísimo mayor que E**: la gente consume mucho más de lo que produce. Poner el trabajo pesado del lado de *L* es empujar el costo hacia donde más se repite.
+En una red social **$L$ es muchísimo mayor que $E$**: la gente consume mucho más de lo que produce. Poner el trabajo pesado del lado de *L* es empujar el costo hacia donde más se repite.
 
 Así que lo dimos vuelta:
 
@@ -111,45 +115,45 @@ Servir una página pasó de "resolver una consulta compleja" a "leer una lista y
 
 Con la arquitectura resuelta, el ranking quedó siendo un sistema de puntajes que puedo escribir en una línea:
 
-```
-Score = Base(acción) × M_afinidad × M_recencia × Decay(t) × (1 ± ε)
-```
+$$
+\text{Score} \;=\; B(a) \;\times\; M_{\text{afinidad}} \;\times\; M_{\text{recencia}} \;\times\; D(t) \;\times\; (1 \pm \varepsilon)
+$$
 
 Cada término resuelve un problema distinto:
 
-**`Base(acción)`** — no toda interacción demuestra el mismo interés. Guardar algo en una colección dice muchísimo más que pasar por al lado. Seguir a alguien dice todavía más, porque es una apuesta sobre todo su contenido futuro. Los valores se ordenan según cuánta intención requiere cada acción:
+**$B(a)$, la base de la acción** — no toda interacción demuestra el mismo interés. Guardar algo en una colección dice muchísimo más que pasar por al lado. Seguir a alguien dice todavía más, porque es una apuesta sobre todo su contenido futuro. Los valores se ordenan según cuánta intención requiere cada acción:
 
-```
-Base(seguir) > Base(guardar) > Base(publicar) > Base(visitar)
-```
+$$
+B(\text{seguir}) > B(\text{guardar}) > B(\text{publicar}) > B(\text{visitar})
+$$
 
-**`M_afinidad`** — amplifica el contenido de creadores con los que ya tenés relación. Si seguís a alguien, nos dijiste explícitamente que te importa.
+**$M_{\text{afinidad}}$** — amplifica el contenido de creadores con los que ya tenés relación. Si seguís a alguien, nos dijiste explícitamente que te importa.
 
-**`M_recencia`** — un empujón extra si interactuaste con ese creador hace poco. Captura el interés "caliente" del momento, distinto del interés estable.
+**$M_{\text{recencia}}$** — un empujón extra si interactuaste con ese creador hace poco. Captura el interés "caliente" del momento, distinto del interés estable.
 
-**`Decay(t)`** — el término que mantiene el feed fresco. Sin él, un contenido que explotó hace un mes se queda arriba para siempre. Con decaimiento exponencial:
+**$D(t)$, el decaimiento** — el término que mantiene el feed fresco. Sin él, un contenido que explotó hace un mes se queda arriba para siempre. Con decaimiento exponencial:
 
-```
-Decay(t) = e^(−λ·t)
-```
+$$
+D(t) = e^{-\lambda t}
+$$
 
-donde `t` es la antigüedad y `λ` regula la velocidad de olvido. Es cómodo pensarlo en términos de **vida media** —el tiempo que tarda un contenido en valer la mitad—:
+donde $t$ es la antigüedad y $\lambda$ regula la velocidad de olvido. Es cómodo pensarlo en términos de **vida media** —el tiempo que tarda un contenido en valer la mitad—:
 
-```
-t½ = ln(2) / λ
-```
+$$
+t_{1/2} = \frac{\ln 2}{\lambda}
+$$
 
 Así el parámetro deja de ser abstracto: en vez de discutir "cuánto vale lambda", discutís "queremos que una publicación pierda la mitad de su relevancia en dos días". Eso lo puede opinar cualquiera del equipo, no solo el que escribió el código.
 
-**`(1 ± ε)`** — una pizca de aleatoriedad, con ε chico. Sin esto el feed es determinista y se vuelve monótono: siempre lo mismo, en el mismo orden. Ese ruido controlado es lo que permite que aparezca contenido inesperado.
+**$(1 \pm \varepsilon)$** — una pizca de aleatoriedad, con $\varepsilon$ chico. Sin esto el feed es determinista y se vuelve monótono: siempre lo mismo, en el mismo orden. Ese ruido controlado es lo que permite que aparezca contenido inesperado.
 
 Acá aparece un problema clásico de estos sistemas, el de **explotación contra exploración**: si solo mostrás lo que ya sabés que funciona, nunca descubrís nada nuevo, y el contenido de creadores sin historial jamás arranca (el famoso *arranque en frío*). La solución es reservar una porción fija de cada página para descubrimiento:
 
-```
-página = (1 − p) × [mejor contenido conocido]  +  p × [exploración]
-```
+$$
+\text{página} = (1 - p) \cdot [\text{mejor contenido conocido}] \;+\; p \cdot [\text{exploración}]
+$$
 
-Con `p` chico y fijo. Simple, predecible, y suficiente.
+Con $p$ chico y fijo. Simple, predecible, y suficiente.
 
 ### La ventaja que nadie menciona: se puede explicar
 
@@ -171,18 +175,18 @@ De cada publicación generamos representaciones vectoriales de la imagen y del t
 
 Con eso, "buscar contenido parecido" se vuelve un problema geométrico. La medida habitual es la similitud coseno:
 
-```
-sim(a, b) = (a · b) / (‖a‖ × ‖b‖)
-```
+$$
+\operatorname{sim}(\mathbf{a}, \mathbf{b}) = \frac{\mathbf{a} \cdot \mathbf{b}}{\lVert \mathbf{a} \rVert \, \lVert \mathbf{b} \rVert}
+$$
 
 Que da 1 si los vectores apuntan al mismo lado, 0 si no tienen relación. Ordenás por esa similitud y tenés "publicaciones similares".
 
-El problema práctico: comparar contra todo el catálogo es `O(N)` por consulta, y cada comparación es sobre vectores de miles de dimensiones. Eso no escala. La solución son los **índices de vecinos aproximados**, que sacrifican un poco de exactitud a cambio de un salto brutal de velocidad:
+El problema práctico: comparar contra todo el catálogo es $O(N)$ por consulta, y cada comparación es sobre vectores de miles de dimensiones. Eso no escala. La solución son los **índices de vecinos aproximados**, que sacrifican un poco de exactitud a cambio de un salto brutal de velocidad:
 
-```
-Búsqueda exacta:      O(N)        · recall 100%
-Búsqueda aproximada:  ~O(log N)   · recall ~95-99%
-```
+| | Complejidad | Recall |
+|---|---|---|
+| Búsqueda exacta | $O(N)$ | 100 % |
+| Búsqueda aproximada | $\sim O(\log N)$ | ~95-99 % |
 
 ```mermaid
 flowchart LR
@@ -245,10 +249,10 @@ Los pasos 1 y 2 son los que de verdad importan y son los que casi todos se salte
 
 Hay un detalle en el paso 2 que vale oro y que también sale del paper: **elegir bien qué predecís**. YouTube no optimiza clicks, optimiza tiempo de visualización. ¿Por qué? Porque optimizar clicks premia el contenido engañoso: la miniatura que promete algo que el contenido no cumple gana, aunque el usuario se arrepienta al instante.
 
-```
-Optimizar clicks        → premia el título/miniatura llamativos
-Optimizar tiempo real   → premia el contenido que efectivamente vale
-```
+| Qué optimizás | Qué termina premiando |
+|---|---|
+| Clicks | El título y la miniatura llamativos |
+| Tiempo real de consumo | El contenido que efectivamente vale |
 
 Si entrenás sobre la métrica equivocada, el modelo va a aprender exactamente lo que le pediste — y lo que le pediste era el problema.
 

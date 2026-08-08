@@ -134,7 +134,7 @@
             "title": "Software Engineer",
             "company": "Adviters",
             "period": "Junio 2021 – Marzo 2022",
-            "description": "Adviters es una consultora de tecnología. Trabajé para Banco Comafi.",
+            "description": "Adviters es una  consultora de tecnología. Trabajé para Banco Comafi.",
             "items": [
                 "Migré un backend monolítico legacy a un microservicio moderno con Spring Boot.",
                 "Implementé Data Lakes e integré servicios SOAP y REST para mejorar la interoperabilidad de los sistemas del banco.",

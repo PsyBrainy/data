@@ -201,11 +201,11 @@ La clave está en qué se hace con esa salida. Un informe de auditoría no es un
 
 Es la misma división de siempre, aplicada a otro terreno: ella recorre, yo juzgo.
 
-## Código como ganado
+## El dominio es la mascota; los bordes son el ganado
 
 Acá hay algo que suena contradictorio y quiero desarmar.
 
-Por un lado soy insoportablemente estricto con la arquitectura: DDD, hexagonal, la regla de dependencia no se negocia. Por el otro, tengo que admitir que **hoy le voy faltando el respeto al código**.
+Por un lado soy insoportablemente estricto con la arquitectura: DDD, puertos y adaptadores, la regla de dependencia no se negocia. Por el otro, tengo que admitir que **hoy le voy faltando el respeto al código**.
 
 Con la IA puedo construir una solución robusta, mirarla funcionando, y descartarla entera porque encontré un enfoque mejor. Eso antes era impensable. Producir código costaba tanto que uno terminaba defendiendo lo que había escrito solo por lo que le había costado escribirlo. **El costo hundido decidía la arquitectura.**
 
@@ -215,7 +215,7 @@ Pero ese cálculo cambió. Si una solución robusta cuesta unas horas en lugar d
 
 Creo que ya es hora de dejar de romantizar el código: **es ganado, no una mascota.**
 
-Ahora bien, la distinción importa muchísimo, y es exactamente la que da la arquitectura hexagonal:
+Ahora bien, la distinción importa muchísimo, y es exactamente la que da la arquitectura de puertos y adaptadores —lo que mucha gente conoce como hexagonal—:
 
 ```mermaid
 flowchart TB
@@ -236,7 +236,7 @@ flowchart TB
 
 **La forma en que el negocio se acciona —los bordes— es ganado.** Los adaptadores, las integraciones, la infraestructura: reemplazables, desechables, regenerables. Si mañana hay una forma mejor de hablar con un proveedor externo, se tira y se hace de nuevo. No pasa nada. Justamente para eso separamos las capas.
 
-Y fijate que hay una consecuencia práctica hermosa en esto: **la arquitectura hexagonal, que ya era buena idea, se volvió todavía mejor idea.** Si tus bordes están bien aislados detrás de puertos, podés regenerarlos con IA sin tocar el corazón del sistema. La misma disciplina que te protegía de un cambio de proveedor ahora te protege de tu propia velocidad.
+Y fijate que hay una consecuencia práctica hermosa en esto: **separar por puertos y adaptadores, que ya era buena idea, se volvió todavía mejor idea.** Si tus bordes están bien aislados detrás de puertos, podés regenerarlos con IA sin tocar el corazón del sistema. La misma disciplina que te protegía de un cambio de proveedor ahora te protege de tu propia velocidad.
 
 Ya vivimos este cambio antes, además. Pasó con los servidores cuando aparecieron los contenedores: dejaron de ser máquinas con nombre propio, cuidadas a mano, y pasaron a ser instancias desechables que se levantan y se destruyen sin ceremonia. El mercado va hacia componentes digitales desechables, y el código está entrando en esa categoría.
 

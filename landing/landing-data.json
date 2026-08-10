@@ -2,7 +2,7 @@
     "profile": {
         "paragraphs": [
             "Soy Martín Correa, Desarrollador de Software Senior con más de 7 años de experiencia. Aprendí a programar solo, construyendo el software que necesitaba una empresa que co-fundé, y desde entonces no paré. Hoy hago algo muy concreto: convierto la idea de un founder en un producto sólido, bien construido y listo para escalar.",
-            "Mi especialidad es el diseño y desarrollo de sistemas backend y arquitecturas de microservicios (Hexagonal, DDD, event-driven) con Scala, Kotlin y Java/Spring Boot. Ese estándar lo forjé en sistemas de pago de misión crítica —Prisma/Payway, Fiserv, Banco Comafi—, donde un error no es una opción: arquitectura, buenas prácticas y código que envejece bien.",
+            "Mi especialidad es el diseño y desarrollo de sistemas backend y arquitecturas de microservicios (puertos y adaptadores, DDD, event-driven) con Scala, Kotlin y Java/Spring Boot. Ese estándar lo forjé en sistemas de pago de misión crítica —Prisma/Payway, Fiserv, Banco Comafi—, donde un error no es una opción: arquitectura, buenas prácticas y código que envejece bien.",
             "Busco sumarme como mano derecha técnica de equipos que están construyendo algo que valga la pena. Me obsesiona aprender —de la arquitectura a la IA— y compartir lo que sé. Digo lo que soy y construyo lo que prometo."
         ]
     },
@@ -91,7 +91,7 @@
             "description": "Branded es una startup early-stage (equipo de 5) que co-fundé: una red social de social shopping que conecta a creadores de contenido, marcas y compradores, con una comunidad de ~38 mil seguidores.",
             "items": [
                 "Lidero la visión tecnológica, la arquitectura y la infraestructura del producto.",
-                "Diseño y desarrollo de microservicios con Arquitectura Hexagonal y Domain-Driven Design (DDD), con foco en alta cohesión y bajo acoplamiento.",
+                "Diseño y desarrollo de microservicios con arquitectura de puertos y adaptadores (hexagonal) y Domain-Driven Design (DDD), con foco en alta cohesión y bajo acoplamiento.",
                 "Diseño de algoritmos de contenido que integran IA para personalizar el feed, priorizando la rapidez de respuesta.",
                 "Arquitectura de sistemas orientados a eventos de alta concurrencia con Kafka (mensajería asíncrona) y Redis (caché de alto rendimiento) sobre Google Cloud Platform.",
                 "Pipelines de CI/CD con Jenkins en un entorno distribuido sobre GCP."
@@ -114,7 +114,7 @@
             "period": "Julio 2024 – Octubre 2025",
             "description": "Dividenz es una plataforma de inversión en real estate. Trabajé en un equipo reducido de 5 desarrolladores, en contacto directo con el CTO.",
             "items": [
-                "Desarrollo de microservicios con Arquitectura Hexagonal y principios de DDD, optimizando la modularidad del sistema.",
+                "Desarrollo de microservicios con arquitectura de puertos y adaptadores y principios de DDD, optimizando la modularidad del sistema.",
                 "Implementación y análisis de métricas de los procesos de inversión y de onboarding de clientes con Elasticsearch.",
                 "Diseño de soluciones escalables y migración de procesos legacy, integrando Kafka y AWS."
             ]

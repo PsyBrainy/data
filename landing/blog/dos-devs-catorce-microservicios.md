@@ -90,7 +90,7 @@ Ninguna de esas decisiones fue tomada mirando qué estaba de moda. Todas fueron 
 
 Acá está lo que más quiero transmitir, porque es lo que la mayoría subestima.
 
-Cuando saqué el dominio de productos del monolito, no hice simplemente "otro servicio". Lo modelé siguiendo **Domain-Driven Design** y **arquitectura hexagonal**, igual que todos los que vinieron después. Y soy muy estricto con eso: la lógica de negocio en el centro, las integraciones —base de datos, Kafka, APIs externas, HTTP— en los bordes, comunicándose por puertos y adaptadores. La regla de dependencia no se negocia: el dominio no sabe que existe Postgres, ni Kafka, ni Spring.
+Cuando saqué el dominio de productos del monolito, no hice simplemente "otro servicio". Lo modelé siguiendo **Domain-Driven Design** y **arquitectura de puertos y adaptadores** —lo que mucha gente conoce como hexagonal—, igual que todos los que vinieron después. Y soy muy estricto con eso: la lógica de negocio en el centro, las integraciones —base de datos, Kafka, APIs externas, HTTP— en los bordes, comunicándose por puertos y adaptadores. La regla de dependencia no se negocia: el dominio no sabe que existe Postgres, ni Kafka, ni Spring.
 
 Suena a manual. Pero el motivo por el que lo sostengo no es estético, es puramente práctico. Cuando sos dos personas y catorce servicios, esto es lo que compra:
 

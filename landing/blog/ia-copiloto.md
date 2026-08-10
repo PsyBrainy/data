@@ -201,7 +201,7 @@ La clave está en qué se hace con esa salida. Un informe de auditoría no es un
 
 Es la misma división de siempre, aplicada a otro terreno: ella recorre, yo juzgo.
 
-## El dominio es la mascota; los bordes son el ganado
+## Código como ganado
 
 Acá hay algo que suena contradictorio y quiero desarmar.
 

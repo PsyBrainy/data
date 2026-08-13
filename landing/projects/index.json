@@ -1,0 +1,62 @@
+{
+    "projects": [
+        {
+            "slug": "branded",
+            "title": "Branded — la arquitectura de una red social de social shopping",
+            "role": "Co-fundé la startup y construí su plataforma desde cero",
+            "context": "Red social de social shopping: conecta creadores de contenido, marcas y compradores.",
+            "summary": "Diseñé toda la arquitectura —microservicios hexagonales, DDD y event-driven— para que un equipo de cinco sostenga un producto vivo sin sobre-ingeniería. Incluye un feed personalizado con IA pensado para responder rápido.",
+            "highlight": "~38.000 seguidores · activaciones reales en BAFWEEK y BRANDHAUS",
+            "stack": ["Kotlin", "Spring Boot", "Kafka", "Redis", "GCP", "DDD", "Arquitectura hexagonal"],
+            "period": "2023 – Actualidad",
+            "featured": true,
+            "href": "/proyectos/branded",
+            "confidential": false,
+            "image": "images/branded.jpg"
+        },
+        {
+            "slug": "gateway-pagos",
+            "title": "Gateway de pagos de misión crítica",
+            "role": "Desarrollé funcionalidades core full-stack",
+            "context": "Uno de los procesadores de pago más grandes de la región.",
+            "summary": "Construí features internas y para clientes sobre un sistema donde un error no es una opción. Backend en Scala funcional y Kotlin/Spring Boot, con la robustez que exige un gateway de pagos. Lideré workshops internos de Clean Architecture y puertos y adaptadores.",
+            "stack": ["Scala", "Play Framework", "Kotlin", "Spring Boot", "React"],
+            "period": "2022 – 2024",
+            "featured": false,
+            "confidential": true
+        },
+        {
+            "slug": "backoffice-pagos",
+            "title": "Modernización de un backoffice de pagos",
+            "role": "Migré una base de código legacy crítica",
+            "context": "Plataforma que gestiona el alta de terminales POS y clientes de una red de pagos global.",
+            "summary": "Llevé la plataforma de Java 8 a Java 21 sin cortar la operación —modernizar el motor del avión en pleno vuelo—. Despliegues sobre OpenShift.",
+            "stack": ["Java 21", "Spring Boot", "OpenShift", "Kubernetes"],
+            "period": "2025 – Actualidad",
+            "featured": false,
+            "confidential": true
+        },
+        {
+            "slug": "inversion-real-estate",
+            "title": "Plataforma de inversión en real estate",
+            "role": "Desarrollé microservicios y observabilidad del negocio",
+            "context": "Producto para invertir en propiedades; equipo reducido, contacto directo con el CTO.",
+            "summary": "Microservicios con puertos y adaptadores y DDD para ganar modularidad. Instrumenté métricas de los procesos de inversión y de onboarding con Elasticsearch, y migré procesos legacy integrando Kafka y AWS.",
+            "stack": ["Kotlin", "Java", "Kafka", "AWS", "Elasticsearch"],
+            "period": "2024 – 2025",
+            "featured": false,
+            "confidential": true
+        },
+        {
+            "slug": "banca-microservicios",
+            "title": "De monolito a microservicios en banca",
+            "role": "Modernicé el backend y mejoré la interoperabilidad",
+            "context": "Sistemas core de un banco.",
+            "summary": "Migré un backend monolítico legacy a un microservicio en Spring Boot. Implementé Data Lakes e integré servicios SOAP y REST para que sistemas que no se hablaban empezaran a hacerlo. Dicté workshops internos de SOLID, DDD y Clean Architecture.",
+            "stack": ["Java", "Spring Boot", "SOAP", "REST"],
+            "period": "2021 – 2022",
+            "featured": false,
+            "confidential": true
+        }
+    ]
+}

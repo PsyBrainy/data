@@ -4,7 +4,8 @@
             "slug": "no-estudies-la-herramienta",
             "title": "No estudies la herramienta. Entendé el problema.",
             "date": "2026-09-13",
-            "excerpt": "Un alumno me preguntó si tenía que aprender Redis. Le dije \"depende\" —la respuesta más honesta que hay—. Lo que enseñé en una aceleración de Alkemy: por qué el concepto le gana a la herramienta, cómo bajo buenas prácticas sin abrumar, y por qué me metí a formar gente."
+            "excerpt": "Un alumno me preguntó si tenía que aprender Redis. Le dije \"depende\" —la respuesta más honesta que hay—. Lo que enseñé en una aceleración de Alkemy: por qué el concepto le gana a la herramienta, cómo bajo buenas prácticas sin abrumar, y por qué me metí a formar gente.",
+            "image": "images/no-estudies-la-herramienta.jpg"
         },
         {
             "slug": "ddd-sin-microservicios",

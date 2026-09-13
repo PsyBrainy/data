@@ -1,6 +1,19 @@
 {
     "posts": [
         {
+            "slug": "no-estudies-la-herramienta",
+            "title": "No estudies la herramienta. Entendé el problema.",
+            "date": "2026-09-13",
+            "excerpt": "Un alumno me preguntó si tenía que aprender Redis. Le dije \"depende\" —la respuesta más honesta que hay—. Lo que enseñé en una aceleración de Alkemy: por qué el concepto le gana a la herramienta, cómo bajo buenas prácticas sin abrumar, y por qué me metí a formar gente."
+        },
+        {
+            "slug": "ddd-sin-microservicios",
+            "title": "No necesitás microservicios para hacer DDD",
+            "date": "2026-08-12",
+            "excerpt": "El backlash de los microservicios se está leyendo mal. No fracasó el buen diseño: fracasó la complejidad operativa que creímos que venía incluida. DDD, puertos y adaptadores, y por qué el monolito modular es el destino —no el paso previo.",
+            "image": "images/ddd-sin-microservicios.jpg"
+        },
+        {
             "slug": "ia-copiloto",
             "title": "No dejo que la IA piense. Solo que ejecute",
             "date": "2026-08-08",

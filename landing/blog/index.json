@@ -11,7 +11,8 @@
             "title": "No necesitás microservicios para hacer DDD",
             "date": "2026-08-12",
             "excerpt": "El backlash de los microservicios se está leyendo mal. No fracasó el buen diseño: fracasó la complejidad operativa que creímos que venía incluida. DDD, puertos y adaptadores, y por qué el monolito modular es el destino —no el paso previo.",
-            "image": "images/ddd-sin-microservicios.jpg"
+            "image": "images/ddd-sin-microservicios.jpg",
+            "hidden": true
         },
         {
             "slug": "ia-copiloto",

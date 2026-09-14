@@ -1,4 +1,4 @@
-Sobre el final de la aceleración, terminando una clase, un alumno me hizo la pregunta más común del mundo: si le convenía aprender alguna base tipo Redis.
+Sobre el final de la aceleración, terminando un encuentro, un alumno me hizo la pregunta más común del mundo: si le convenía aprender alguna base tipo Redis.
 
 Le dije que dependía. Y que ese "depende" era, en serio, la respuesta que más iba a escuchar en toda su carrera. No como excusa para no comprometerse: al revés. "Depende" es lo más honesto que podés contestar una vez que entendés de qué se trata esto de verdad.
 
@@ -24,7 +24,7 @@ Cuando lo mirás así, cambia todo. Muchas veces la mejor solución para el clie
 
 ## Primero el problema, después la herramienta
 
-Esto no es solo un discurso; es también cómo doy la clase. Enseño con conceptos core y ejemplos de la vida real, y casi siempre en el mismo orden: primero te hago sentir el problema, después te muestro la herramienta que lo resuelve.
+Esto no es solo un discurso; es también cómo encaro la mentoría. Enseño con conceptos core y ejemplos de la vida real, y casi siempre en el mismo orden: primero te hago sentir el problema, después te muestro la herramienta que lo resuelve.
 
 Un ejemplo concreto. Antes de mostrarles Spring, agarré una app Java común y la partí en capas a mano. El controlador eran unos `print` con toda la lógica del menú; el servicio hacía las validaciones; el repositorio leía y escribía en memoria. Sin framework, tenían que instanciar todo ellos, en el `main`. Ahí les mostré inyección de dependencias e inversión de dependencias —justo entre el servicio y el repositorio—, para que vieran lo bueno: como el servicio no dependía de la clase concreta, cambiar una implementación por otra era trivial.
 
@@ -40,11 +40,11 @@ Tenía ganas de mostrarles arquitectura de puertos y adaptadores (lo que muchos 
 
 Lo que sí bajé fue lo que iban a usar sí o sí en el proyecto: capas, SOLID, GitFlow, y mucho espacio para que se organizaran entre ellos.
 
-## La clase se pone buena cuando preguntan
+## El encuentro se pone bueno cuando preguntan
 
 Si hay algo en lo que insistí desde el primer día, fue que preguntaran. Los molesté bastante con eso. Al principio costaba —nadie quiere quedar como el que no sabe—, pero de a poco se fueron soltando, y empezaron a preguntar cada vez más.
 
-Ahí la clase cambió de temperatura. Dejó de ser yo hablando y pasó a ser un ida y vuelta. Y eso aceleró el aprendizaje de todos, el mío incluido, porque cada pregunta te obliga a explicar de otra manera algo que creías tener claro.
+Ahí el encuentro cambió de temperatura. Dejó de ser yo hablando y pasó a ser un ida y vuelta. Y eso aceleró el aprendizaje de todos, el mío incluido, porque cada pregunta te obliga a explicar de otra manera algo que creías tener claro.
 
 Me causó gracia darme cuenta de dónde venía yo. Cuando aprendí a programar por mi cuenta, el insoportable que preguntaba todo era yo: le escribía a desconocidos, armaba grupos de estudio, molestaba a cualquiera que supiera más. Ahora me tocó el otro lado del mostrador: tirar del hilo para que ellos se animaran. Aprender por tu cuenta nunca fue aprender en soledad. Enseñar, descubrí, tampoco.
 
@@ -52,7 +52,7 @@ Me causó gracia darme cuenta de dónde venía yo. Cuando aprendí a programar p
 
 Disfruto de enseñar. Pero hay algo más. Me viene incomodando ver puestos senior ocupados por gente sin una base real, y en vez de quejarme, esto es lo que puedo aportar: capacitar gente de verdad. Es mi grano de arena.
 
-Y hay una parte más interesada, si querés, pero igual de honesta: estas personas son las que quizás me cruce en un trabajo. Hoy teníamos una relación de profe y alumno; mañana pueden ser colegas con los que me toque construir algo codo a codo. Formar bien a la gente con la que después voy a trabajar es de las mejores inversiones que puedo hacer.
+Y hay una parte más interesada, si querés, pero igual de honesta: estas personas son las que quizás me cruce en un trabajo. Hoy teníamos una relación de mentor y alumno; mañana pueden ser colegas con los que me toque construir algo codo a codo. Formar bien a la gente con la que después voy a trabajar es de las mejores inversiones que puedo hacer.
 
 Porque las personas que se forman hoy son las que mañana van a construir sistemas que le cambian la vida a un montón de gente. Instruir bien a quien recién arranca no es un gesto simpático: es una responsabilidad con la industria.
 
@@ -60,4 +60,4 @@ Y algo que no esperaba: en dos meses y medio no armamos un curso, armamos un gru
 
 Estoy orgulloso de todos ellos. De verdad. De dónde arrancaron y de dónde llegaron en dos meses y medio, del laburo que le pusieron y de las ganas que no aflojaron ni un día. Ver cuánto aprendieron —lo lejos que se fueron de donde empezaron— es la mejor devolución que me podía llevar de todo esto.
 
-Yo aprendí a programar sin un guía que me marcara el camino. Estas 120 horas —que fueron muchas más, nos juntábamos incluso fuera de hora— me tocó ser, para otros, esa mano que a mí me faltó. Así que si estás dudando en dar esa clase, ese taller, esa mano a alguien que sabe menos que vos: dala. Vas a entender tu oficio más hondo que nunca. Y capaz, sin darte cuenta, termines siendo para alguien el guía que vos no tuviste.
+Yo aprendí a programar sin un guía que me marcara el camino. Estas 120 horas —que fueron muchas más, nos juntábamos incluso fuera de hora— me tocó ser, para otros, esa mano que a mí me faltó. Así que si estás dudando en dar esa mentoría, ese taller, esa mano a alguien que sabe menos que vos: dala. Vas a entender tu oficio más hondo que nunca. Y capaz, sin darte cuenta, termines siendo para alguien el guía que vos no tuviste.

@@ -102,7 +102,7 @@ Suena a manual. Pero el motivo por el que lo sostengo no es estético, es purame
 
 **4. Onboarding sin acompañamiento.** Un desarrollador nuevo puede abrir un servicio y entender el negocio leyendo el código, sin que nadie tenga que explicarle nada. Cuando el equipo es de dos y ninguno está full-time, no hay tiempo para tutorías largas.
 
-La conclusión, dicha sin vueltas: **la gente cree que las buenas prácticas te frenan. En equipos chicos son literalmente lo contrario: son lo único que te permite ir rápido durante años en lugar de durante meses.**
+La conclusión: **la gente cree que las buenas prácticas te frenan. En equipos chicos son literalmente lo contrario: son lo único que te permite ir rápido durante años en lugar de durante meses.**
 
 La deuda técnica se paga con lo único que a un equipo chico no le sobra: atención.
 

@@ -1,6 +1,12 @@
 {
     "posts": [
         {
+            "slug": "ia-detras-de-un-puerto",
+            "title": "No pongas la IA en el centro de tu arquitectura. Ponela detrás de un puerto.",
+            "date": "2026-09-21",
+            "excerpt": "Una búsqueda que recorría toda la tabla en cada visita me enseñó que el problema casi nunca es el modelo: es dónde lo enchufás. RAG de punta a punta — el enriquecimiento que decide si encontrás algo, el operador correcto, el índice que sí se usa, y el patrón outbox para que el trabajo no se pierda en silencio."
+        },
+        {
             "slug": "no-estudies-la-herramienta",
             "title": "No estudies la herramienta. Entendé el problema.",
             "date": "2026-09-13",

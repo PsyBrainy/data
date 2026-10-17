@@ -1,7 +1,7 @@
 {
     "profile": {
         "paragraphs": [
-            "Soy Martín Correa, Desarrollador de Software Senior con más de 7 años de experiencia. Aprendí a programar solo, construyendo el software que necesitaba una empresa que co-fundé, y desde entonces no paré. Hoy hago algo muy concreto: convierto la idea de un founder en un producto sólido, bien construido y listo para escalar.",
+            "Soy Martín Correa, Desarrollador de Software Senior con más de 7 años de experiencia. Aprendí a programar por mi cuenta, construyendo el software que necesitaba una empresa que co-fundé, y desde entonces no paré. Hoy hago algo muy concreto: convierto la idea de un founder en un producto sólido, bien construido y listo para escalar.",
             "Mi especialidad es el diseño y desarrollo de sistemas backend y arquitecturas de microservicios (puertos y adaptadores, DDD, event-driven) con Scala, Kotlin y Java/Spring Boot. Ese estándar lo forjé en sistemas de pago de misión crítica —Prisma/Payway, Fiserv, Banco Comafi—, donde un error no es una opción: arquitectura, buenas prácticas y código que envejece bien.",
             "Busco sumarme como mano derecha técnica de equipos que están construyendo algo que valga la pena. Me obsesiona aprender —de la arquitectura a la IA— y compartir lo que sé. Digo lo que soy y construyo lo que prometo."
         ]
@@ -36,6 +36,18 @@
                 "SOLID",
                 "TDD",
                 "Event Driven"
+            ]
+        },
+        {
+            "category": "IA aplicada",
+            "skills": [
+                "Spring AI",
+                "Vertex AI",
+                "LLMs",
+                "Tool calling",
+                "RAG",
+                "Embeddings",
+                "Búsqueda semántica"
             ]
         },
         {
@@ -76,7 +88,6 @@
                 "MongoDB",
                 "Redis",
                 "MySQL",
-                "Embeddings",
                 "Firestore",
                 "Elasticsearch",
                 "Loki"

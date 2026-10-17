@@ -15,6 +15,20 @@
             "image": "images/branded.jpg"
         },
         {
+            "slug": "psyengine",
+            "title": "PsyEngine — un motor de juegos propio, escrito de cero en Rust",
+            "role": "Diseño la arquitectura; la IA escribe el código",
+            "context": "Motor de juegos AI-first para Android y Xbox, con un kit para shooters 3D multijugador.",
+            "summary": "Lo diseñé para que una IA pueda escribir el código y verificar su propio trabajo sin mirar la pantalla: simulación determinista y headless, reglas que la compilación hace cumplir y un solo comando de verificación. Netcode propio con predicción e interpolación, render sobre Vulkan y animación esquelética.",
+            "highlight": "60 cuadros por segundo en un teléfono de gama baja (Galaxy A12) · 41 decisiones de arquitectura documentadas",
+            "stack": ["Rust", "Vulkan", "HLSL", "ECS", "Netcode UDP", "Android"],
+            "period": "2026 – Actualidad",
+            "featured": true,
+            "href": "/proyectos/psyengine",
+            "confidential": false,
+            "image": "images/psyengine.png"
+        },
+        {
             "slug": "gateway-pagos",
             "title": "Gateway de pagos de misión crítica",
             "role": "Desarrollé funcionalidades core full-stack",

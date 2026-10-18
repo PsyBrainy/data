@@ -26,7 +26,7 @@
             "featured": true,
             "href": "/proyectos/psyengine",
             "confidential": false,
-            "image": "images/psyengine.png"
+            "image": "images/psyengine-splash.gif"
         },
         {
             "slug": "gateway-pagos",

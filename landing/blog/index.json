@@ -1,6 +1,12 @@
 {
     "posts": [
         {
+            "slug": "vida-de-un-buscador",
+            "title": "La vida de un buscador: del LIKE a los embeddings, etapa por etapa",
+            "date": "2026-10-22",
+            "excerpt": "Una caja de búsqueda cambia de forma varias veces en la vida de un producto. Del LIKE a los índices, el texto completo, la réplica, el motor dedicado y su sincronización, hasta la búsqueda semántica con embeddings y la híbrida: qué señal te avisa que llegó cada etapa, cuánto cuesta el salto, y en cuál estamos en Branded."
+        },
+        {
             "slug": "ia-detras-de-un-puerto",
             "title": "No pongas la IA en el centro de tu arquitectura. Ponela detrás de un puerto.",
             "date": "2026-09-21",

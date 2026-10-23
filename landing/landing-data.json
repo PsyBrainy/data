@@ -2,7 +2,7 @@
     "profile": {
         "paragraphs": [
             "Soy Martín Correa, Desarrollador de Software Senior con más de 7 años de experiencia. Aprendí a programar por mi cuenta, construyendo el software que necesitaba una empresa que co-fundé, y desde entonces no paré. Hoy hago algo muy concreto: convierto la idea de un founder en un producto sólido, bien construido y listo para escalar.",
-            "Mi especialidad es el diseño y desarrollo de sistemas backend y arquitecturas de microservicios (puertos y adaptadores, DDD, event-driven) con Scala, Kotlin y Java/Spring Boot. Ese estándar lo forjé en sistemas de pago de misión crítica —Prisma/Payway, Fiserv, Banco Comafi—, donde un error no es una opción: arquitectura, buenas prácticas y código que envejece bien.",
+            "Lo que más me importa es entender el problema antes de elegir la tecnología. En Branded eso es pensar en los dolores de creadores y marcas y decidir qué vale la pena construir; en sistemas de pago de misión crítica —Prisma/Payway, Fiserv, Banco Comafi— aprendí que ahí un error no es una opción. Construyo backends y arquitecturas de microservicios (puertos y adaptadores, DDD, event-driven) con Kotlin, Java/Spring Boot y Scala, y pongo IA en producción sobre modelos de fundación.",
             "Busco sumarme como mano derecha técnica de equipos que están construyendo algo que valga la pena. Me obsesiona aprender —de la arquitectura a la IA— y compartir lo que sé. Digo lo que soy y construyo lo que prometo."
         ]
     },
@@ -101,11 +101,12 @@
             "period": "Marzo 2023 – Actualidad",
             "description": "Branded es una startup early-stage (equipo de 5) que co-fundé: una red social de social shopping que conecta a creadores de contenido, marcas y compradores, con una comunidad de ~38 mil seguidores.",
             "items": [
-                "Lidero la visión tecnológica, la arquitectura y la infraestructura del producto.",
-                "Diseño y desarrollo de microservicios con arquitectura de puertos y adaptadores (hexagonal) y Domain-Driven Design (DDD), con foco en alta cohesión y bajo acoplamiento.",
-                "Diseño de algoritmos de contenido que integran IA para personalizar el feed, priorizando la rapidez de respuesta.",
-                "Arquitectura de sistemas orientados a eventos de alta concurrencia con Kafka (mensajería asíncrona) y Redis (caché de alto rendimiento) sobre Google Cloud Platform.",
-                "Pipelines de CI/CD con Jenkins en un entorno distribuido sobre GCP."
+                "Traduzco los dolores de creadores y marcas en producto: analizo el feedback, los eventos y la actividad de los creadores en redes para decidir qué construir y qué dejar para después.",
+                "Investigo qué plataformas de e-commerce usan las marcas que queremos sumar y diseño las integraciones para que conecten su tienda sin fricción (TiendaNube, Shopify).",
+                "Aislé la sincronización de catálogos de las marcas en servicios propios comunicados por eventos (Kafka): sumar marcas dejó de poner en riesgo el login y el feed del resto de los usuarios.",
+                "Habilité la búsqueda y los filtros por color y por las palabras reales del mercado, enriqueciendo cada publicación con IA (Vertex AI, embeddings) e indexándola en Redis Search.",
+                "Mido antes de construir: en lugar de meterle una red neuronal al feed, lo resolví con un ranking por eventos en Redis, más rápido de iterar y fácil de explicar.",
+                "Lidero la arquitectura (puertos y adaptadores, DDD) que nos permite a dos desarrolladores sostener unos catorce microservicios en producción sobre Google Cloud."
             ]
         },
         {
@@ -114,9 +115,8 @@
             "period": "Noviembre 2025 – Actualidad",
             "description": "Eldar es una consultora de tecnología; trabajo para Fiserv, una empresa global de medios de pago.",
             "items": [
-                "Migración de una plataforma backoffice legacy de Java 8 a Java 21, modernizando una base de código crítica para la operación.",
-                "La plataforma gestiona el alta de terminales (POS) y de clientes, entre otras operaciones del negocio de pagos.",
-                "Despliegue de servicios en OpenShift (Kubernetes)."
+                "Modernizo la plataforma de backoffice con la que Fiserv da de alta terminales POS y clientes: una base de código crítica para la operación del negocio de pagos, que migro de Java 8 a Java 21 para que pueda seguir evolucionando.",
+                "Despliego los servicios en OpenShift (Kubernetes)."
             ]
         },
         {
@@ -125,9 +125,9 @@
             "period": "Julio 2024 – Octubre 2025",
             "description": "Dividenz es una plataforma de inversión en real estate. Trabajé en un equipo reducido de 5 desarrolladores, en contacto directo con el CTO.",
             "items": [
-                "Desarrollo de microservicios con arquitectura de puertos y adaptadores y principios de DDD, optimizando la modularidad del sistema.",
-                "Implementación y análisis de métricas de los procesos de inversión y de onboarding de clientes con Elasticsearch.",
-                "Diseño de soluciones escalables y migración de procesos legacy, integrando Kafka y AWS."
+                "Implementé y analicé las métricas de los procesos de inversión y de onboarding de clientes (Elasticsearch), para tener visibilidad de cómo avanzaba cada inversor en el proceso.",
+                "Saqué procesos legacy hacia soluciones escalables integrando Kafka y AWS.",
+                "Desarrollé microservicios con puertos y adaptadores y DDD, en un equipo de cinco y en contacto directo con el CTO."
             ]
         },
         {
@@ -136,9 +136,9 @@
             "period": "Marzo 2022 – Julio 2024",
             "description": "Redbee Studios es una consultora de software. Trabajé en el proyecto Payway (Prisma Medios de Pago), un gateway de pagos de misión crítica.",
             "items": [
-                "Desarrollo Full Stack sobre un stack diverso: backend en Scala/Play Framework y microservicios en Kotlin/Spring Boot, con interfaces en React.js.",
-                "Construcción de funcionalidades internas y para clientes, con foco en la robustez propia de un sistema de pagos.",
-                "Lideré workshops técnicos internos sobre buenas prácticas, Clean Architecture y el patrón de Puertos y Adaptadores en programación funcional."
+                "Construí funcionalidades para los clientes de Payway y para sus equipos internos, en un gateway de pagos donde la robustez no se negocia.",
+                "Trabajé de punta a punta: backend en Scala/Play Framework, microservicios en Kotlin/Spring Boot e interfaces en React.js.",
+                "Armé y lideré workshops internos para que el equipo aplicara buenas prácticas, Clean Architecture y puertos y adaptadores en programación funcional."
             ]
         },
         {
@@ -147,8 +147,8 @@
             "period": "Junio 2021 – Marzo 2022",
             "description": "Adviters es una  consultora de tecnología. Trabajé para Banco Comafi.",
             "items": [
-                "Migré un backend monolítico legacy a un microservicio moderno con Spring Boot.",
-                "Implementé Data Lakes e integré servicios SOAP y REST para mejorar la interoperabilidad de los sistemas del banco.",
+                "Mejoré la interoperabilidad de los sistemas del banco: integré servicios SOAP y REST e implementé data lakes.",
+                "Migré un backend monolítico legacy a un microservicio con Spring Boot.",
                 "Dicté workshops internos sobre principios de diseño: SOLID, DDD y Clean Architecture."
             ]
         },
@@ -158,9 +158,9 @@
             "period": "Enero 2018 – Marzo 2020",
             "description": "Adango Hockey es una fábrica de equipamiento de protección para arqueros de hockey sobre césped, que co-fundé.",
             "items": [
-                "Fue acá donde mi carrera en software despegó: aprendí a programar en serio construyendo las herramientas que el negocio necesitaba.",
-                "Desarrollé el software interno para gestionar la operación de la fábrica.",
-                "Construí la tienda online (e-commerce) de la marca, incluyendo todo el backend."
+                "Acá despegó mi carrera en software: aprendí a programar en serio resolviendo los problemas de mi propia fábrica.",
+                "Construí el software interno para gestionar la operación de la fábrica.",
+                "Llevé la marca a la venta online: construí la tienda (e-commerce) con todo su backend."
             ]
         }
     ],

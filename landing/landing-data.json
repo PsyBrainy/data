@@ -189,5 +189,67 @@
             "institution": "Universidad Nacional de La Plata",
             "period": "2012 - 2017"
         }
-    ]
+    ],
+    "about": {
+        "headline": "AI Engineer · Llevo IA a producción en productos reales · Arquitectura y backend",
+        "lead": "Vos traés la idea; yo la convierto en un producto bien construido y listo para escalar.",
+        "principles": [
+            {
+                "icon": "search",
+                "title": "Primero el problema",
+                "text": "Antes de elegir una tecnología, entiendo qué le duele al usuario y qué necesita el negocio.",
+                "proof": "En Branded analizo el feedback, lo que pasa en los eventos y la actividad de los creadores en redes, e investigo con qué plataformas venden las marcas que queremos sumar, para que puedan conectar su tienda sin fricción."
+            },
+            {
+                "icon": "chart",
+                "title": "Mido antes de construir",
+                "text": "A veces la mejor decisión es lo que no construís.",
+                "proof": "Podía ponerle una red neuronal al feed de Branded. Medí y lo resolví con un ranking por eventos, más rápido de iterar y fácil de explicar. La IA la usé donde hacía falta de verdad: entender cada publicación para buscar por color y por las palabras reales del mercado."
+            },
+            {
+                "icon": "api",
+                "title": "Arquitectura que aguanta el crecimiento",
+                "text": "Diseño para que el producto pueda crecer sin tener que rehacerlo.",
+                "proof": "Cuando la sincronización de catálogos de las marcas empezó a poner en riesgo toda la app, la aislamos en servicios propios comunicados por eventos. Hoy dos desarrolladores sostenemos unos catorce microservicios en producción."
+            }
+        ],
+        "path": [
+            {
+                "period": "2023 – hoy",
+                "place": "Branded",
+                "role": "Co-founder",
+                "line": "Social shopping: producto, arquitectura e IA en producción, en un equipo de cinco."
+            },
+            {
+                "period": "2025 – hoy",
+                "place": "Fiserv · vía Eldar",
+                "role": "Sr. Software Engineer",
+                "line": "Modernizo la plataforma con la que se dan de alta terminales POS y clientes."
+            },
+            {
+                "period": "2024 – 2025",
+                "place": "Dividenz",
+                "role": "Sr. Software Developer",
+                "line": "Métricas de inversión y onboarding, y migración de procesos legacy."
+            },
+            {
+                "period": "2022 – 2024",
+                "place": "Payway · vía Redbee",
+                "role": "Ssr. Software Developer",
+                "line": "Funcionalidades para un gateway de pagos de misión crítica."
+            },
+            {
+                "period": "2021 – 2022",
+                "place": "Banco Comafi · vía Adviters",
+                "role": "Software Engineer",
+                "line": "Interoperabilidad entre los sistemas del banco."
+            },
+            {
+                "period": "2018 – 2020",
+                "place": "Adango Hockey",
+                "role": "Co-founder",
+                "line": "Aprendí a programar resolviendo los problemas de mi propia fábrica."
+            }
+        ]
+    }
 }

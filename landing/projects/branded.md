@@ -63,7 +63,7 @@ Esa decisión —medir antes de enamorarme de la solución más vistosa— está
 
 ## El resultado
 
-Branded es un producto vivo, no un demo. Tiene una comunidad de **~38.000 seguidores** y corrió activaciones reales en eventos como **BAFWEEK** y **BRANDHAUS**.
+Branded está en producción: tiene una comunidad de **~38.000 seguidores** y corrió activaciones reales en eventos como **BAFWEEK** y **BRANDHAUS**.
 
 Pero el resultado del que estoy más seguro no es una métrica de vanidad. Es que **seguimos sosteniendo la plataforma siendo un equipo mínimo**, y que agregar algo nuevo no implica rezar. La arquitectura que elegí al principio es la razón de que eso siga siendo verdad hoy.
 

@@ -218,6 +218,27 @@
                 "proof": "Cuando la sincronización de catálogos de las marcas empezó a poner en riesgo toda la app, la aislamos en servicios propios comunicados por eventos. Hoy dos desarrolladores sostenemos unos catorce microservicios en producción."
             }
         ],
+        "formats": {
+            "intro": "Arrancamos con una charla: me contás el producto y vemos cuál de estas formas encaja.",
+            "items": [
+                {
+                    "title": "Mano derecha técnica",
+                    "text": "Me sumo al equipo part-time: tomo las decisiones de arquitectura con vos, construyo y dejo la base lista para que el producto crezca."
+                },
+                {
+                    "title": "Revisión de arquitectura",
+                    "text": "Miro lo que ya tenés, te digo qué aguanta y qué no, y qué cambiaría primero para que escale sin reescribir todo."
+                },
+                {
+                    "title": "Construir el MVP",
+                    "text": "Llevo tu idea a un primer producto bien construido: lo justo para salir, con una base que no haya que tirar después."
+                },
+                {
+                    "title": "IA en el producto",
+                    "text": "Si tu producto necesita IA, la integro de verdad, no de demo: búsqueda semántica, agentes con herramientas, embeddings. Construyo sobre modelos existentes; no los entreno."
+                }
+            ]
+        },
         "path": [
             {
                 "period": "2023 – hoy",

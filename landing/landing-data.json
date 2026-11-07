@@ -224,18 +224,22 @@
             "items": [
                 {
                     "title": "Mano derecha técnica",
+                    "icon": "duo",
                     "text": "Me sumo al equipo part-time: tomo las decisiones de arquitectura con vos, construyo y dejo la base lista para que el producto crezca."
                 },
                 {
                     "title": "Revisión de arquitectura",
+                    "icon": "check",
                     "text": "Miro lo que ya tenés, te digo qué aguanta y qué no, y qué cambiaría primero para que escale sin reescribir todo."
                 },
                 {
                     "title": "Construir el MVP",
+                    "icon": "app",
                     "text": "Llevo tu idea a un primer producto bien construido: lo justo para salir, con una base que no haya que tirar después."
                 },
                 {
                     "title": "IA en el producto",
+                    "icon": "model",
                     "text": "Si tu producto necesita IA, la llevo a producción: búsqueda semántica, agentes con herramientas, embeddings. Construyo sobre modelos existentes; no los entreno."
                 }
             ]

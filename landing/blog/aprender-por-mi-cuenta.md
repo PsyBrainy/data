@@ -68,7 +68,7 @@ Por eso hoy doy clases y mentoreo. Y por eso también, cuando no tengo alumnos a
 
 ## Lo que pienso sobre aprender por tu cuenta
 
-Voy a ser honesto con lo que creo, aunque no todos coincidan: para mí, ser autodidacta es la forma más real de aprender esto.
+Lo digo aunque no todos coincidan: para mí, ser autodidacta es la forma más real de aprender esto.
 
 No es que reniegue del estudio formal porque sí. Es que la universidad no tiene un sistema que le sirva a cualquiera, y sobre todo no se actualiza a la velocidad a la que se mueve el mercado. Se aprende muchísimo más mirando qué pide la industria, buscando buenos libros y practicando. Lo más que hice con los programas universitarios fue robarles el temario para saber qué bibliografía necesitaba. Después marqué mi propio camino.
 

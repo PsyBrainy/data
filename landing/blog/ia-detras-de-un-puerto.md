@@ -203,7 +203,7 @@ $$ \text{espera} = \min\!\left(base \cdot 2^{\,intentos},\; tope\right) + \text{
 
 El *jitter* es un pequeño desvío aleatorio, y está para que mil trabajos que fallaron al mismo tiempo no vuelvan a intentar todos juntos en el mismo instante. Y cuando los intentos pasan de cierto número, la fila se marca como fallida definitiva y va a parar a una cola de descarte, para que alguien la mire con calma en vez de reintentarla para siempre.
 
-Ahora, la parte que hay que decir con honestidad, porque es la contracara del patrón.
+Ahora, la contracara del patrón.
 
 El outbox te da entrega **al menos una vez**, no exactamente una vez. El caso es fácil de ver: el worker publica el evento, y se muere justo antes de marcar la fila como procesada. Cuando vuelve, la fila sigue pendiente, y el trabajo se hace de nuevo. Eso no es un defecto de la implementación: es inevitable, porque publicar hacia afuera y marcar adentro tampoco comparten transacción. Movimos el problema a un lugar donde duele mucho menos, pero no lo hicimos desaparecer.
 

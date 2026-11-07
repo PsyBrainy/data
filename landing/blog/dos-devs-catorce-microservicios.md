@@ -16,7 +16,7 @@ Ah, y ninguno de los dos trabaja acá full-time. Yo tengo un empleo, doy clases 
 
 Cuando cuento esto, la reacción es casi siempre la misma: *"¿microservicios siendo dos? Eso es sobre-ingeniería"*.
 
-Es una crítica razonable, y merece una respuesta larga y honesta.
+Es una crítica razonable, y merece una respuesta larga.
 
 ## No empezamos así (ni cerca)
 

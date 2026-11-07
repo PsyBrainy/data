@@ -52,7 +52,7 @@ Me causó gracia darme cuenta de dónde venía yo. Cuando aprendí a programar p
 
 Disfruto de enseñar. Pero hay algo más. Me viene incomodando ver puestos senior ocupados por gente sin una base real, y en vez de quejarme, esto es lo que puedo aportar: capacitar gente de verdad. Es mi grano de arena.
 
-Y hay una parte más interesada, si querés, pero igual de honesta: estas personas son las que quizás me cruce en un trabajo. Hoy teníamos una relación de mentor y alumno; mañana pueden ser colegas con los que me toque construir algo codo a codo. Formar bien a la gente con la que después voy a trabajar es de las mejores inversiones que puedo hacer.
+Y hay una parte más interesada, si querés: estas personas son las que quizás me cruce en un trabajo. Hoy teníamos una relación de mentor y alumno; mañana pueden ser colegas con los que me toque construir algo codo a codo. Formar bien a la gente con la que después voy a trabajar es de las mejores inversiones que puedo hacer.
 
 Porque las personas que se forman hoy son las que mañana van a construir sistemas que le cambian la vida a un montón de gente. Instruir bien a quien recién arranca no es un gesto simpático: es una responsabilidad con la industria.
 

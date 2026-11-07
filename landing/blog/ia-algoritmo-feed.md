@@ -266,4 +266,4 @@ Si sos founder y estás por pedir "el algoritmo de TikTok" para tu producto: el 
 
 La decisión técnica de la que más orgulloso estoy en estos tres años no fue construir algo.
 
-Fue medir con honestidad, entender que la herramienta de moda era la incorrecta para el problema que tenía, y **no construirla**.
+Fue medir, entender que la herramienta de moda era la incorrecta para el problema que tenía, y **no construirla**.

@@ -38,7 +38,8 @@
             "stack": ["Scala", "Play Framework", "Kotlin", "Spring Boot", "React"],
             "period": "2022 – 2024",
             "featured": false,
-            "confidential": true
+            "confidential": false,
+            "client": "Payway (Prisma Medios de Pago) · vía Redbee Studios"
         },
         {
             "slug": "backoffice-pagos",
@@ -49,7 +50,8 @@
             "stack": ["Java 21", "Spring Boot", "OpenShift", "Kubernetes"],
             "period": "2025 – Actualidad",
             "featured": false,
-            "confidential": true
+            "confidential": false,
+            "client": "Fiserv · vía Eldar"
         },
         {
             "slug": "inversion-real-estate",
@@ -60,7 +62,8 @@
             "stack": ["Kotlin", "Java", "Kafka", "AWS", "Elasticsearch"],
             "period": "2024 – 2025",
             "featured": false,
-            "confidential": true
+            "confidential": false,
+            "client": "Dividenz"
         },
         {
             "slug": "banca-microservicios",
@@ -71,7 +74,8 @@
             "stack": ["Java", "Spring Boot", "SOAP", "REST"],
             "period": "2021 – 2022",
             "featured": false,
-            "confidential": true
+            "confidential": false,
+            "client": "Banco Comafi · vía Adviters"
         }
     ]
 }

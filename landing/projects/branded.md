@@ -28,6 +28,33 @@ Esa historia la conté en detalle acá: [Dos desarrolladores, catorce microservi
 
 El corazón es event-driven. La mensajería asíncrona va por **Kafka**, el caché de alto rendimiento por **Redis**, y todo corre sobre **Google Cloud Platform**. Los pipelines de CI/CD, con Jenkins en un entorno distribuido.
 
+Simplificado, se ve así. Lo que puede fallar o tardar —sincronizar los catálogos de las marcas, enriquecer con IA— vive aparte y se entera de los cambios por eventos. Sumar una marca nueva ya no pone en riesgo el login ni el feed.
+
+```mermaid
+flowchart LR
+    accTitle: Arquitectura de Branded, vista de dominios
+    accDescr: Las apps hablan con tres dominios: identidad, contenido y comercio. Los dominios se avisan los cambios por eventos en Kafka. Las integraciones con tiendas externas, la IA y las notificaciones viven aparte y reaccionan a esos eventos, así un problema en una de ellas no frena el producto.
+    app["App y web<br/>creadores · marcas · compradores"]
+    subgraph dominio["Dominios · servicios con puertos y adaptadores"]
+        direction TB
+        identidad["Identidad<br/>usuarios y creadores"]
+        contenido["Contenido<br/>looks · feed"]
+        comercio["Comercio<br/>tiendas · catálogo"]
+    end
+    kafka{{"Kafka<br/>eventos de dominio"}}
+    subgraph aparte["Aparte: reaccionan a eventos y no frenan el producto"]
+        direction TB
+        integraciones["Integraciones con tiendas<br/>TiendaNube · Shopify"]
+        ia["IA<br/>tags · embeddings · SEO<br/>Vertex AI"]
+        avisos["Notificaciones<br/>push · email"]
+    end
+    app --> dominio
+    dominio <-- eventos --> kafka
+    kafka <-- catálogo --> integraciones
+    kafka <-- enriquecimiento --> ia
+    kafka -- avisos --> avisos
+```
+
 La parte que más me preguntan es el feed. Branded tiene un algoritmo de contenido que personaliza lo que ve cada usuario, y sí, tiene IA. Pero la decisión más importante que tomé ahí fue **dónde no ponerla**.
 
 Podía construir "el algoritmo de YouTube", una red neuronal recomendando el feed. Me senté a medir antes de escribir el modelo. Y decidí no hacerlo: para el tamaño del producto, la latencia y el costo de mantener eso no se justificaban frente a lo que ganaba. La IA se ganó su lugar en otras partes, donde sí rendía. El feed prioriza responder rápido.

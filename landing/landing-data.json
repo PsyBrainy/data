@@ -64,10 +64,9 @@
                 "Gradle",
                 "Maven",
                 "Git",
-                "Jira",
-                "Confluence",
                 "Grafana",
                 "Prometheus",
+                "Loki",
                 "Logstash"
             ]
         },
@@ -89,8 +88,14 @@
                 "Redis",
                 "MySQL",
                 "Firestore",
-                "Elasticsearch",
-                "Loki"
+                "Elasticsearch"
+            ]
+        },
+        {
+            "category": "Trabajo en equipo",
+            "skills": [
+                "Jira",
+                "Confluence"
             ]
         }
     ],
@@ -127,7 +132,7 @@
             "items": [
                 "Implementé y analicé las métricas de los procesos de inversión y de onboarding de clientes (Elasticsearch), para tener visibilidad de cómo avanzaba cada inversor en el proceso.",
                 "Saqué procesos legacy hacia soluciones escalables integrando Kafka y AWS.",
-                "Desarrollé microservicios con puertos y adaptadores y DDD, en un equipo de cinco y en contacto directo con el CTO."
+                "Desarrollé microservicios con puertos y adaptadores y DDD."
             ]
         },
         {
@@ -145,7 +150,7 @@
             "title": "Software Engineer",
             "company": "Adviters",
             "period": "Junio 2021 – Marzo 2022",
-            "description": "Adviters es una  consultora de tecnología. Trabajé para Banco Comafi.",
+            "description": "Adviters es una consultora de tecnología. Trabajé para Banco Comafi.",
             "items": [
                 "Mejoré la interoperabilidad de los sistemas del banco: integré servicios SOAP y REST e implementé data lakes.",
                 "Migré un backend monolítico legacy a un microservicio con Spring Boot.",
@@ -166,7 +171,7 @@
     ],
     "mentoring": [
         {
-            "title": "Mentor & Instructor",
+            "title": "Mentor e instructor",
             "institution": "Alkemy",
             "period": "2022 – Actualidad",
             "description": "Mentoreo de forma recurrente a desarrolladores en formación: backend con Java y Spring Boot, arquitectura y buenas prácticas. Quiero ser el guía que yo no tuve."
@@ -174,20 +179,20 @@
         {
             "title": "Docente",
             "institution": "Dirección General de Cultura y Educación",
-            "period": "2016 - 2021",
-            "description": "Ejercicio docente donde desarrollé habilidades avanzadas de comunicación, liderazgo y formación de equipos."
+            "period": "2016 – 2021",
+            "description": "Ejercicio docente."
         }
     ],
     "education": [
         {
             "title": "Carrera de Backend con Java",
             "institution": "Platzi",
-            "period": "2017 - 2020"
+            "period": "2017 – 2020"
         },
         {
             "title": "Profesorado en Psicología",
             "institution": "Universidad Nacional de La Plata",
-            "period": "2012 - 2017"
+            "period": "2012 – 2017"
         }
     ],
     "about": {

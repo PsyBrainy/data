@@ -20,7 +20,7 @@ Elegí arquitectura seria desde el principio —microservicios con puertos y ada
 
 Esto tiene un costo: DDD y puertos y adaptadores se pagan al arranque. Escribís más al principio. Pero compran algo que en un equipo chico vale oro: **poder tocar una parte sin entender el todo, y sin miedo.** Cuando sos dos personas sosteniendo la plataforma, esa propiedad no es un lujo de purista. Es lo que te deja dormir.
 
-> La regla que seguí: alta cohesión, bajo acoplamiento, y cada pieza entra cuando duele — no antes.
+> La regla que seguí: alta cohesión, bajo acoplamiento, y cada pieza entra cuando duele, no antes.
 
 Esa historia la conté en detalle acá: [Dos desarrolladores, catorce microservicios](/blog/dos-devs-catorce-microservicios).
 
@@ -28,7 +28,7 @@ Esa historia la conté en detalle acá: [Dos desarrolladores, catorce microservi
 
 El corazón es event-driven. La mensajería asíncrona va por **Kafka**, el caché de alto rendimiento por **Redis**, y todo corre sobre **Google Cloud Platform**. Los pipelines de CI/CD, con Jenkins en un entorno distribuido.
 
-La parte que más me preguntan es el feed. Branded tiene un algoritmo de contenido que personaliza lo que ve cada usuario, y sí, tiene IA — pero la decisión más importante que tomé ahí fue **dónde no ponerla**.
+La parte que más me preguntan es el feed. Branded tiene un algoritmo de contenido que personaliza lo que ve cada usuario, y sí, tiene IA. Pero la decisión más importante que tomé ahí fue **dónde no ponerla**.
 
 Podía construir "el algoritmo de YouTube", una red neuronal recomendando el feed. Me senté a medir antes de escribir el modelo. Y decidí no hacerlo: para el tamaño del producto, la latencia y el costo de mantener eso no se justificaban frente a lo que ganaba. La IA se ganó su lugar en otras partes, donde sí rendía. El feed prioriza responder rápido.
 

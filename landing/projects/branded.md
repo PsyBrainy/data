@@ -1,6 +1,6 @@
 Branded es una red social de social shopping: conecta a creadores de contenido, marcas y compradores en un mismo lugar. La co-fundé en 2023 y desde el día uno me tocó lo mismo que sigo haciendo hoy: la visión tecnológica, la arquitectura y la infraestructura.
 
-Éramos cinco. Ninguno de esos cinco era un ejército de plataforma. Y aun así había que construir algo que no se rompiera cuando creciera.
+Éramos cinco co-fundadores, y dos en la parte técnica. Ninguno de esos cinco era un ejército de plataforma. Y aun así había que construir algo que no se rompiera cuando creciera.
 
 Ese es el problema real de una startup temprana: **tenés que elegir bien sin tiempo, sin gente y sin margen para rehacer.**
 

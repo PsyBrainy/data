@@ -2,7 +2,7 @@ Branded es una red social de social shopping: conecta a creadores de contenido, 
 
 Éramos cinco. Ninguno de esos cinco era un ejército de plataforma. Y aun así había que construir algo que no se rompiera cuando creciera.
 
-Ese es el problema real de una startup temprana, y casi nadie lo cuenta con honestidad: **tenés que elegir bien sin tiempo, sin gente y sin margen para rehacer.**
+Ese es el problema real de una startup temprana: **tenés que elegir bien sin tiempo, sin gente y sin margen para rehacer.**
 
 ## El problema
 
@@ -18,7 +18,7 @@ Lo que yo necesitaba era una tercera cosa: **una base que aguante crecer, pero q
 
 Elegí arquitectura seria desde el principio —microservicios con puertos y adaptadores (hexagonal) y Domain-Driven Design— pero la fui metiendo por pieza, cuando el dolor lo justificaba. No catorce microservicios de entrada. Cada uno entró cuando ya había una razón concreta para que existiera.
 
-El trade-off lo asumo de frente: DDD y hexagonal tienen un costo de arranque. Escribís más al principio. Pero compran algo que en un equipo chico vale oro: **poder tocar una parte sin entender el todo, y sin miedo.** Cuando sos dos personas sosteniendo la plataforma, esa propiedad no es un lujo de purista. Es lo que te deja dormir.
+Esto tiene un costo: DDD y puertos y adaptadores se pagan al arranque. Escribís más al principio. Pero compran algo que en un equipo chico vale oro: **poder tocar una parte sin entender el todo, y sin miedo.** Cuando sos dos personas sosteniendo la plataforma, esa propiedad no es un lujo de purista. Es lo que te deja dormir.
 
 > La regla que seguí: alta cohesión, bajo acoplamiento, y cada pieza entra cuando duele — no antes.
 

@@ -1,4 +1,4 @@
-PsyEngine es un motor de juegos que estoy escribiendo de cero en Rust, y en el que vengo trabajando desde principio de año. Arranca por Android y Xbox, y el primer género que soporta es el shooter 3D multijugador. No es un juego publicado: es la base para poder sacar juegos uno detrás de otro sin depender de un motor ajeno.
+PsyEngine es un motor de juegos que estoy escribiendo de cero en Rust, y en el que vengo trabajando desde principio de año. Arranca por Android y ya soporta dos géneros: el shooter 3D multijugador y los juegos de pelea de plataformas. El motor no se publica: es la base para poder sacar juegos uno detrás de otro sin depender de un motor ajeno. El primero de esos juegos ya está en la prueba interna de Google Play.
 
 Tiene una particularidad, que es la razón por la que lo cuento acá: **está diseñado para que una IA escriba el código y pueda verificar su propio trabajo sin mirar la pantalla.**
 
@@ -16,8 +16,8 @@ Tomé las decisiones de diseño antes de que se escribiera el código, y las con
 
 - **Simulación determinista y headless.** El juego corre sin pantalla, tick a tick, y el estado entero se resume en un hash. Mismo input, mismo hash, en x86 y en ARM. Así un test puede correr una partida de cinco minutos y comparar números en vez de mirar imágenes.
 - **Un solo comando de verificación.** `cargo xtask check` corre formato, lints estrictos, tests, documentación, la lista de dependencias permitidas, la auditoría de `unsafe`, las capas y los shaders. Terminar algo significa que eso está en verde; no hay otra definición.
-- **Capas que no se pueden saltar.** El motor no sabe nada del shooter. Cada módulo declara su capa (motor, kit de género o juego) y un chequeo rompe el build si alguien la cruza. Un juego de juguete, con cajas que hacen dash, prueba que la frontera sirve para algo que no es un shooter.
-- **Casi sin dependencias externas en el runtime.** Cada una necesita una decisión escrita. Me cuesta más trabajo, pero cada pieza del motor la entiendo y la puedo cambiar.
+- **Capas que no se pueden saltar.** El motor no sabe nada del shooter. Cada módulo declara su capa (motor, kit de género o juego) y un chequeo rompe el build si alguien la cruza. La prueba de que la frontera sirve es un segundo género: un kit para juegos de pelea, armado sobre el mismo motor. Lo genérico que necesitó —la matemática en enteros, el rollback, los sprites— quedó en el motor, no en el kit.
+- **Casi sin dependencias externas en el runtime.** Cada una necesita una decisión escrita. Me cuesta más trabajo, pero cada pieza del motor la entiendo y la puedo cambiar. La única en la red es la criptografía del canal seguro, que no se escribe a mano.
 
 Así quedan las capas. Las flechas solo bajan: si alguien hace que el motor dependa del shooter, no compila.
 
@@ -25,16 +25,20 @@ Así quedan las capas. Las flechas solo bajan: si alguien hace que el motor depe
 flowchart TB
     subgraph juegos["Juegos"]
         toy["Juego de juguete<br/>cajas con dash, en red"]
-        otro["Un shooter, un juego de peleas…<br/>(pendiente)"]
+        pelea["Un juego de peleas<br/>(en prueba interna)"]
+        shooter["Un shooter<br/>(pendiente)"]
     end
     kit["<b>Kit de shooter</b><br/>movimiento · armas · daño<br/>partida · bots · mapa<br/>la app del cliente"]
-    motor["<b>Motor</b><br/>sirve para cualquier juego<br/>simulación y ECS · red<br/>render sobre Vulkan<br/>assets y animación<br/>plataforma Mac y Android"]
+    kitp["<b>Kit de peleas</b><br/>golpes · armas · partida<br/>bots · 2D y 3D"]
+    motor["<b>Motor</b><br/>sirve para cualquier juego<br/>simulación y ECS · red y rollback<br/>render sobre Vulkan · audio<br/>assets y animación<br/>plataforma Mac y Android"]
     toy --> motor
-    otro -.-> kit
+    pelea --> kitp
+    shooter -.-> kit
     kit --> motor
+    kitp --> motor
 ```
 
-Las decisiones quedan escritas como ADRs: qué se eligió, qué se descartó y por qué. Hoy son 41. La arquitectura, la matemática de la simulación —cómo tiene que comportarse cada fórmula— y las reglas de frontera las diseño yo; la IA escribe el código.
+Las decisiones quedan escritas como ADRs: qué se eligió, qué se descartó y por qué. Hoy son 51. La arquitectura, la matemática de la simulación —cómo tiene que comportarse cada fórmula— y las reglas de frontera las diseño yo; la IA escribe el código.
 
 ## Cómo trabajo con la IA
 
@@ -66,11 +70,11 @@ Lo fui armando por etapas, con un criterio que me ordenó todo: **el juego funci
 flowchart TB
     subgraph r1[" "]
         direction LR
-        e1["1 · Simulación<br/>sin gráficos"] --> e2["2 · Red"] --> e3["3 · Vulkan y<br/>el teléfono"] --> e4["4 · Render, assets<br/>y animación (en curso)"]
+        e1["1 · Simulación<br/>sin gráficos"] --> e2["2 · Red"] --> e3["3 · Vulkan y<br/>el teléfono"] --> e4["4 · Render, assets<br/>y animación"]
     end
     subgraph r2[" "]
         direction LR
-        e5["5 · DirectX 12"] -.-> e6["6 · Xbox"] -.-> e7["Servidores<br/>en la nube"]
+        p["Kit de peleas<br/>(en curso)"] --> j["Primer juego y<br/>servidores (en curso)"] -.-> e5["5 · DirectX 12<br/>(bloqueada)"] -.-> e6["6 · Xbox"]
     end
     r1 -.-> r2
     style r1 fill:none,stroke:none
@@ -82,6 +86,8 @@ Primero, la simulación del shooter sin gráficos: movimiento con slide, wallrun
 Después, la red: transporte UDP propio, predicción del jugador, interpolación de los demás, compensación de lag y un simulador de red mala para probar todo eso en tests. La prueba de cierre fue con 8 bots conectados por una red mala simulada durante 5 minutos: el estado de cada cliente coincidió al bit con el del servidor, con unos 5 KB/s por jugador.
 
 Recién ahí, el render: una capa propia sobre Vulkan, ventana propia en la Mac y en Android, texturas comprimidas, luz y sombras con tres niveles de calidad, y animación esquelética con skinning en la GPU. Los tests de render comparan cada imagen contra una de referencia; las dos de acá abajo salen de esos tests.
+
+Después de la etapa 4 el plan cambió de orden. DirectX 12 necesita una PC con Windows, que no tengo, así que la etapa 5 quedó bloqueada y adelanté lo que sí podía probar: un segundo género y los servidores en la nube.
 
 ![El mapa de pruebas con materiales y oclusión, en calidad alta](images/psyengine-arena.jpg)
 
@@ -137,6 +143,16 @@ Sobre el motor está el kit de shooter, con un disparo inspirado en el de Halo y
 
 La prueba de cierre de esta etapa fue una partida de 5 minutos con bots, sin nadie atravesando paredes, determinista tick a tick y reproducible desde su replay. Con 12 jugadores y unos 200 proyectiles en el aire, el 99 % de los ticks tarda menos de 0,35 ms, contra un presupuesto de 1 ms.
 
+### Un segundo género: juegos de pelea
+
+El kit de peleas es para juegos de plataformas al estilo Brawlhalla o Smash: de 2 a 4 jugadores, golpes que suman porcentaje y partidas en línea. El juego de juguete ya había probado que la frontera aguanta un segundo juego, pero es una caja que se mueve: el kit de peleas es el primer juego de verdad que no es el shooter.
+
+- **Enteros en vez de decimales.** La simulación de peleas usa punto fijo (Q16.16) y un seno por tabla, así que el resultado no depende de cómo redondea cada procesador. Cuesta más —8,6 ns contra 1,4 ns por cuerpo y paso—, pero re-simular 4 personajes durante 10 ticks lleva 0,34 µs.
+- **Rollback de todos, con servidor autoritativo.** Cada cliente lleva dos partidas: una confirmada, igual al bit a la del servidor, y una predicha que no se adelanta más de 12 ticks. Cuando llega un input que no esperaba, vuelve atrás y re-simula. En el A12, volver atrás 10 ticks con 4 personajes lleva 30,7 µs: el 0,18 % de un cuadro. Es opcional por juego: el shooter no lo usa.
+- **La simulación no sabe cómo se dibuja.** El mismo juego se puede presentar en 2D, con sprites, o en 3D.
+
+La prueba de cierre de la red fue la de siempre, adaptada: cuatro bots juegan una partida entera por una red de teléfono simulada, y el estado coincide al bit.
+
 ### Red
 
 Servidor autoritativo y transporte UDP propio, con mensajes confiables y no confiables. El cliente predice solo a su propio jugador, con la misma simulación que el servidor. Como el estado propio llega exacto, comparar el hash detecta una desincronización en el momento.
@@ -162,6 +178,7 @@ sequenceDiagram
 
 - **Compensación de lag:** para los disparos instantáneos y los golpes, el servidor rebobina las hitboxes hasta lo que veía el que disparó, con pings de hasta 200 ms.
 - **Ancho de banda:** el estado va en delta contra lo último confirmado y **lo que un jugador no puede ver no se le manda**. Eso ahorra bytes y también sirve contra el wallhack, porque no se puede mostrar lo que nunca llegó. Con 12 bots, unos 6 KB/s por jugador, contra un presupuesto de 15.
+- **Canal seguro:** cada datagrama va cifrado con Noise NK y una cookie sin estado, que le suma 29 bytes al paquete.
 - **Seguridad local:** el servidor valida contra el ping que mide él lo que el cliente dice sobre su latencia, y descarta por la cabecera los paquetes que no son suyos, sin decodificarlos. Un millón de paquetes basura no cambian la partida.
 
 Todo esto se prueba con un simulador de red mala (latencia, variación, pérdida, duplicados, desorden) que es determinista, así que una falla de red se puede reproducir en un test.
@@ -200,6 +217,8 @@ Eso bajó el A12 de 60 a unos 42 cuadros por segundo. La respuesta fueron los ni
 
 Las hitboxes también pueden seguir los huesos de la animación real, y el reloj de la animación viaja por la red, así el cliente anima a cada jugador con el mismo reloj que usa el servidor para sus hitboxes.
 
+El audio también es propio: un formato a 48 kHz, un mezclador sin dependencias y la salida nativa de cada plataforma (AudioUnit en la Mac, AAudio en Android). En el teléfono ya suena; en la Mac falta escucharlo.
+
 ### El harness
 
 `cargo xtask check` es la definición de terminado. Si cualquier paso falla, el cambio no está terminado, lo haya escrito yo o la IA.
@@ -209,7 +228,7 @@ flowchart TB
     s(["cargo xtask check"]) --> r1
     subgraph r1[" "]
         direction LR
-        f["Formato"] --> c["Lints<br/>advertencias = error<br/>reglas de determinismo"] --> t["Tests<br/>más de 600"] --> d["Documentación<br/>lo público, documentado"]
+        f["Formato"] --> c["Lints<br/>advertencias = error<br/>reglas de determinismo"] --> t["Tests<br/>casi 1.000"] --> d["Documentación<br/>lo público, documentado"]
     end
     subgraph r2[" "]
         direction LR
@@ -233,11 +252,13 @@ El teléfono de referencia es un Samsung Galaxy A12, de gama baja, a propósito:
 
 También se probó con la Mac, el A12 y un Redmi 14C jugando a la vez.
 
-Lo que todavía no existe: un juego publicado, el backend de DirectX 12, el port a Xbox y los servidores en la nube. Hoy todo se prueba en local.
+El cierre de la etapa 4 repitió la prueba con el render nuevo: dos partidas de más de 5 minutos a 60,0 cuadros por segundo, con el 99 % de los cuadros por debajo de 20,3 ms, sin errores de validación y con el arranque en 357 ms. Solo se midió el nivel de calidad bajo.
+
+Lo que todavía no existe: un juego público —el primero está en la prueba interna de Google Play y todavía parpadea en algunos teléfonos—, el backend de DirectX 12 y el port a Xbox. Los servidores en la nube recién empiezan: hay un servidor de salas en una VM de GCP, probado por internet.
 
 ## Stack
 
-Rust · Vulkan (ash) · HLSL → SPIR-V · ECS por arquetipos · Netcode UDP propio · Android (GameActivity) · macOS (AppKit) · Simulación determinista
+Rust · Vulkan (ash) · HLSL → SPIR-V · ECS por arquetipos · Netcode UDP propio · Rollback · Punto fijo Q16.16 · Noise NK · Audio propio · Android (GameActivity) · macOS (AppKit) · Simulación determinista
 
 ## Qué me llevo
 

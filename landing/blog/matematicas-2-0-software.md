@@ -58,9 +58,7 @@ La IA aceleró muchísimo las dos primeras. Las otras tres siguen yendo a ritmo 
 
 En un ensayo previo a la charla dejó una frase que me parece de las más precisas que leí sobre IA en mucho tiempo:
 
-> *"A proof that no human can properly explain should be viewed as incomplete, even if it has been formally verified."*
->
-> (Una demostración que ningún humano puede explicar adecuadamente debería considerarse incompleta, aunque haya sido verificada formalmente.)
+> *"Una demostración que ningún humano puede explicar adecuadamente debería considerarse incompleta, aunque haya sido verificada formalmente."*
 
 Fijate lo fuerte que es eso en una disciplina donde la verificación es todo. Está diciendo que el sello de "correcto" no alcanza. Que si nadie lo entiende, falta algo.
 
@@ -162,9 +160,7 @@ Tomarse el tiempo de entender algo despacio era lo normal. Hoy se volvió raro, 
 
 La última diapositiva de la charla de Tao lo resume así:
 
-> *"The primary bottleneck to achieving 'Math 2.0' is not technology, or even institutional culture. It is imagination."*
->
-> (El principal cuello de botella para llegar a *Math 2.0* no es la tecnología, ni siquiera la cultura de las instituciones: es la imaginación.)
+> *"El principal cuello de botella para llegar a *Math 2.0* no es la tecnología, ni siquiera la cultura de las instituciones: es la imaginación."*
 
 En el software creo que pasa algo parecido. Las herramientas ya están, y son increíbles. Lo que nos falta es cambiar qué premiamos: dejar de medir solo cuánto código sale y empezar a valorar cuánto de ese código entendemos.
 

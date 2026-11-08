@@ -4,7 +4,9 @@
             "slug": "matematicas-2-0-software",
             "title": "Las matemáticas ya tienen su versión 2.0. El software es el siguiente.",
             "date": "2026-11-08",
-            "excerpt": "Terence Tao dice que la IA terminó con la escasez de demostraciones y que lo valioso ahora es entenderlas. En el software está pasando lo mismo con el código: el embudo entre generar y entender, el desarrollador que solo aprueba permisos, y lo que aprendí el mes que me quedé sin tokens el primer día."
+            "excerpt": "Terence Tao dice que la IA terminó con la escasez de demostraciones y que lo valioso ahora es entenderlas. En el software está pasando lo mismo con el código: el embudo entre generar y entender, el desarrollador que solo aprueba permisos, y lo que aprendí el mes que me quedé sin tokens el primer día.",
+            "image": "images/matematicas-2-0-software.gif",
+            "imageStill": "images/matematicas-2-0-software.png"
         },
         {
             "slug": "vida-de-un-buscador",

@@ -1,6 +1,14 @@
 {
     "posts": [
         {
+            "slug": "se-terminaron-los-sprints",
+            "title": "¿Se terminaron los sprints?",
+            "date": "2026-11-25",
+            "excerpt": "AWS propone AI-DLC, un ciclo de desarrollo donde la IA propone y el equipo aprueba. El sprint pasa a ser un bolt de horas, la épica una unidad de trabajo, y las fases pasaron de tres a cinco. Qué cambia frente a Agile, qué sigue igual y dónde están los límites.",
+            "image": "images/se-terminaron-los-sprints.gif",
+            "imageStill": "images/se-terminaron-los-sprints.png"
+        },
+        {
             "slug": "matematicas-2-0-software",
             "title": "Las matemáticas ya tienen su versión 2.0. El software es el siguiente.",
             "date": "2026-11-08",
